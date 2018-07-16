@@ -1,24 +1,365 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="share" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qsT-vo-vLl"/>
+                        <viewControllerLayoutGuide type="bottom" id="i2B-p2-d3p"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1z-Km-Gua">
+                                <rect key="frame" x="16" y="44" width="49" height="30"/>
+                                <state key="normal" title="FB网页"/>
+                                <connections>
+                                    <action selector="shareFbWeb:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uyv-Pl-j1L"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ST8-gl-WiD">
+                                <rect key="frame" x="75" y="44" width="49" height="30"/>
+                                <state key="normal" title="FB照片"/>
+                                <connections>
+                                    <action selector="shareFbPhotos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="STS-y1-wV0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCy-D3-AHg">
+                                <rect key="frame" x="16" y="89" width="85" height="30"/>
+                                <state key="normal" title="TW分享网页"/>
+                                <connections>
+                                    <action selector="shareTwWeb:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bPH-FM-mj4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hy-q4-1zs">
+                                <rect key="frame" x="16" y="134" width="116" height="30"/>
+                                <state key="normal" title="INS跳转应用分享"/>
+                                <connections>
+                                    <action selector="shareInsApp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Arg-0N-vlH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQh-bk-nbN">
+                                <rect key="frame" x="16" y="172" width="55" height="30"/>
+                                <state key="normal" title="WX文字"/>
+                                <connections>
+                                    <action selector="shareTextWx:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uxC-ey-F6o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbJ-bd-d1O">
+                                <rect key="frame" x="81" y="172" width="55" height="30"/>
+                                <state key="normal" title="WX图片"/>
+                                <connections>
+                                    <action selector="sharePhWx:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ApT-s2-HPg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVT-wi-cCH">
+                                <rect key="frame" x="146" y="172" width="55" height="30"/>
+                                <state key="normal" title="WX网页"/>
+                                <connections>
+                                    <action selector="shareWebWx:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3tB-dM-OrT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u29-2Z-VR5">
+                                <rect key="frame" x="211" y="172" width="55" height="30"/>
+                                <state key="normal" title="WX视频"/>
+                                <connections>
+                                    <action selector="shareVideoWx:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TcH-6c-cq3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7H-TB-dX9">
+                                <rect key="frame" x="142" y="134" width="86" height="30"/>
+                                <state key="normal" title="INS系统分享"/>
+                                <connections>
+                                    <action selector="shareInsSys:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7rO-TC-Ldb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fT2-Ol-NsA">
+                                <rect key="frame" x="16" y="210" width="55" height="30"/>
+                                <state key="normal" title="WX音乐"/>
+                                <connections>
+                                    <action selector="shareMsicWx:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ofI-7Q-ud5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45Q-08-HUF">
+                                <rect key="frame" x="81" y="210" width="71" height="30"/>
+                                <state key="normal" title="WX小程序"/>
+                                <connections>
+                                    <action selector="shareMiniProgrWx:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ekm-Rs-thl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFF-9E-ba9">
+                                <rect key="frame" x="16" y="248" width="55" height="30"/>
+                                <state key="normal" title="WB文字"/>
+                                <connections>
+                                    <action selector="shareTextWb:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sBG-Ha-Txp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhS-aR-YvQ">
+                                <rect key="frame" x="81" y="248" width="55" height="30"/>
+                                <state key="normal" title="WB图片"/>
+                                <connections>
+                                    <action selector="sharePhWb:" destination="BYZ-38-t0r" eventType="touchUpInside" id="695-U2-Sbu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYJ-co-9hI">
+                                <rect key="frame" x="146" y="248" width="55" height="30"/>
+                                <state key="normal" title="WB视频"/>
+                                <connections>
+                                    <action selector="shareVidWb:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IeK-cr-lk2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sr-wV-f9c">
+                                <rect key="frame" x="211" y="248" width="55" height="30"/>
+                                <state key="normal" title="WB网页"/>
+                                <connections>
+                                    <action selector="shareWebWb:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WzU-zx-6B8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8x-MZ-P8V">
+                                <rect key="frame" x="16" y="286" width="54" height="30"/>
+                                <state key="normal" title="QQ文本"/>
+                                <connections>
+                                    <action selector="shareTextQq:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b6W-bQ-NXX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phc-xm-WGl">
+                                <rect key="frame" x="81" y="286" width="54" height="30"/>
+                                <state key="normal" title="QQ图片"/>
+                                <connections>
+                                    <action selector="shareImgQq:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7I7-7b-QcD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJA-KT-n21">
+                                <rect key="frame" x="146" y="286" width="54" height="30"/>
+                                <state key="normal" title="QQ链接"/>
+                                <connections>
+                                    <action selector="shareWebQq:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xrT-Tn-fK2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rfm-fj-CQp">
+                                <rect key="frame" x="211" y="286" width="54" height="30"/>
+                                <state key="normal" title="QQ视频"/>
+                                <connections>
+                                    <action selector="shareVidQq:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qOs-Zn-Dah"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEp-jq-BBe">
+                                <rect key="frame" x="276" y="286" width="54" height="30"/>
+                                <state key="normal" title="QQ音频"/>
+                                <connections>
+                                    <action selector="shareAudQq:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R9c-Kg-oaW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNZ-Fx-f7I">
+                                <rect key="frame" x="16" y="324" width="62" height="30"/>
+                                <state key="normal" title="空间文字"/>
+                                <connections>
+                                    <action selector="shareTextQz:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6dv-sV-Gts"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZx-GZ-hVb">
+                                <rect key="frame" x="89" y="324" width="62" height="30"/>
+                                <state key="normal" title="空间图片"/>
+                                <connections>
+                                    <action selector="shareImgsQz:" destination="BYZ-38-t0r" eventType="touchUpInside" id="416-2Y-mL1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9Z-fn-6tF">
+                                <rect key="frame" x="162" y="324" width="62" height="30"/>
+                                <state key="normal" title="空间视频"/>
+                                <connections>
+                                    <action selector="shareVidQz:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S35-6e-bcS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8P-um-BLC">
+                                <rect key="frame" x="16" y="362" width="102" height="30"/>
+                                <state key="normal" title="WhatsApp文字"/>
+                                <connections>
+                                    <action selector="shareTextWsa:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1vF-gt-HAS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhB-JB-Bet">
+                                <rect key="frame" x="129" y="362" width="102" height="30"/>
+                                <state key="normal" title="WhatsApp图片"/>
+                                <connections>
+                                    <action selector="shareImgWsa:" destination="BYZ-38-t0r" eventType="touchUpInside" id="47S-xu-Mlp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AbQ-af-eHt">
+                                <rect key="frame" x="242" y="362" width="59" height="30"/>
+                                <state key="normal" title="Google+"/>
+                                <connections>
+                                    <action selector="shareUrlGplus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VYn-ws-3VA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jmk-5Z-6PF">
+                                <rect key="frame" x="16" y="400" width="79" height="30"/>
+                                <state key="normal" title="Tumblr文字"/>
+                                <connections>
+                                    <action selector="shareTextTm:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KH3-zM-D1C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDD-wc-dC8">
+                                <rect key="frame" x="106" y="400" width="79" height="30"/>
+                                <state key="normal" title="Tumblr图片"/>
+                                <connections>
+                                    <action selector="shareImgTm:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kKr-xV-gvk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hf-Qh-ydU">
+                                <rect key="frame" x="132" y="44" width="49" height="30"/>
+                                <state key="normal" title="FB视频"/>
+                                <connections>
+                                    <action selector="shareFbVid:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4dy-8r-Y1X"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6v-vD-zQv">
+                                <rect key="frame" x="189" y="44" width="64" height="30"/>
+                                <state key="normal" title="FB多媒体"/>
+                                <connections>
+                                    <action selector="shareFbMedia:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L6N-Jg-Zbr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZs-be-yqU">
+                                <rect key="frame" x="142.5" y="438" width="90" height="30"/>
+                                <state key="normal" title="获取视频URL"/>
+                                <connections>
+                                    <action selector="getVideoURL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kj2-60-ksc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZs-Uq-O0O">
+                                <rect key="frame" x="16" y="476" width="343" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="eQh-hw-ANB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pki-1I-GQ8">
+                                <rect key="frame" x="236" y="134" width="55" height="30"/>
+                                <state key="normal" title="INS视频"/>
+                                <connections>
+                                    <action selector="shareInsVid:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ITz-eH-DGG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kdo-cy-rGh">
+                                <rect key="frame" x="160" y="210" width="55" height="30"/>
+                                <state key="normal" title="WX文件"/>
+                                <connections>
+                                    <action selector="shareFileWx:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uLG-S8-Q8M"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="oYJ-co-9hI" firstAttribute="top" secondItem="fhS-aR-YvQ" secondAttribute="top" id="0am-Q7-ez2"/>
+                            <constraint firstItem="ST8-gl-WiD" firstAttribute="top" secondItem="q1z-Km-Gua" secondAttribute="top" id="0be-s5-cCE"/>
+                            <constraint firstItem="MbJ-bd-d1O" firstAttribute="top" secondItem="jQh-bk-nbN" secondAttribute="top" id="1Ma-LF-bIi"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="45Q-08-HUF" secondAttribute="trailing" constant="20" symbolic="YES" id="1ZD-zy-Ocs"/>
+                            <constraint firstItem="2sr-wV-f9c" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="oYJ-co-9hI" secondAttribute="trailing" constant="8" symbolic="YES" id="1g6-BC-UB1"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jQh-bk-nbN" secondAttribute="trailingMargin" id="1tp-S5-SvU"/>
+                            <constraint firstItem="Kdo-cy-rGh" firstAttribute="top" secondItem="45Q-08-HUF" secondAttribute="top" id="2LI-nm-969"/>
+                            <constraint firstAttribute="trailing" secondItem="M9Z-fn-6tF" secondAttribute="trailing" constant="151" id="2RH-QV-wdO"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6hy-q4-1zs" secondAttribute="trailingMargin" id="2dJ-N6-dGj"/>
+                            <constraint firstItem="TNZ-Fx-f7I" firstAttribute="top" secondItem="x8x-MZ-P8V" secondAttribute="bottom" constant="8" symbolic="YES" id="47g-m8-lbx"/>
+                            <constraint firstItem="g8P-um-BLC" firstAttribute="leading" secondItem="TNZ-Fx-f7I" secondAttribute="leading" id="6Nq-nA-Dbf"/>
+                            <constraint firstItem="Jmk-5Z-6PF" firstAttribute="top" secondItem="g8P-um-BLC" secondAttribute="bottom" constant="8" id="6ea-Si-KOB"/>
+                            <constraint firstItem="Rfm-fj-CQp" firstAttribute="leading" secondItem="fJA-KT-n21" secondAttribute="trailing" constant="11" id="6ig-6U-Zqv"/>
+                            <constraint firstItem="AbQ-af-eHt" firstAttribute="top" secondItem="OhB-JB-Bet" secondAttribute="top" id="7cU-Kf-cz1"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TNZ-Fx-f7I" secondAttribute="trailing" constant="20" symbolic="YES" id="7oI-vK-U9b"/>
+                            <constraint firstItem="fhS-aR-YvQ" firstAttribute="top" secondItem="wFF-9E-ba9" secondAttribute="top" id="88L-vQ-4dN"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="phc-xm-WGl" secondAttribute="trailing" constant="20" symbolic="YES" id="AT1-VG-EgA"/>
+                            <constraint firstItem="u29-2Z-VR5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LVT-wi-cCH" secondAttribute="trailing" constant="8" symbolic="YES" id="AfV-x6-lj2"/>
+                            <constraint firstItem="jQh-bk-nbN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="BeL-W3-ELq"/>
+                            <constraint firstItem="cEp-jq-BBe" firstAttribute="top" secondItem="Rfm-fj-CQp" secondAttribute="top" id="DTt-cM-SYP"/>
+                            <constraint firstItem="fT2-Ol-NsA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Epn-SB-9jT"/>
+                            <constraint firstItem="wFF-9E-ba9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="FXX-7b-DCc"/>
+                            <constraint firstItem="BZs-be-yqU" firstAttribute="top" secondItem="dDD-wc-dC8" secondAttribute="bottom" constant="8" id="FmA-Sn-B9Q"/>
+                            <constraint firstItem="fhS-aR-YvQ" firstAttribute="leading" secondItem="wFF-9E-ba9" secondAttribute="trailing" constant="10" id="FzB-Gc-cAU"/>
+                            <constraint firstItem="jZx-GZ-hVb" firstAttribute="leading" secondItem="TNZ-Fx-f7I" secondAttribute="trailing" constant="11" id="Gtz-12-Px0"/>
+                            <constraint firstItem="jZx-GZ-hVb" firstAttribute="top" secondItem="TNZ-Fx-f7I" secondAttribute="top" id="GzU-dS-oDz"/>
+                            <constraint firstItem="45Q-08-HUF" firstAttribute="leading" secondItem="fT2-Ol-NsA" secondAttribute="trailing" constant="10" id="H2l-ly-Exi"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="l7H-TB-dX9" secondAttribute="trailing" constant="20" symbolic="YES" id="HpG-lc-pnQ"/>
+                            <constraint firstItem="phc-xm-WGl" firstAttribute="top" secondItem="fhS-aR-YvQ" secondAttribute="bottom" constant="8" id="ICS-H6-xBz"/>
+                            <constraint firstItem="HZs-Uq-O0O" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="IKi-ZP-6Co"/>
+                            <constraint firstItem="6hy-q4-1zs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="IQy-1T-nBU"/>
+                            <constraint firstItem="6hy-q4-1zs" firstAttribute="top" secondItem="MCy-D3-AHg" secondAttribute="bottom" constant="15" id="JFP-3P-T4u"/>
+                            <constraint firstItem="9hf-Qh-ydU" firstAttribute="leading" secondItem="ST8-gl-WiD" secondAttribute="trailing" constant="8" id="LK8-Sv-J8j"/>
+                            <constraint firstItem="MCy-D3-AHg" firstAttribute="top" secondItem="q1z-Km-Gua" secondAttribute="bottom" constant="15" id="O84-Ed-iOC"/>
+                            <constraint firstItem="u29-2Z-VR5" firstAttribute="top" secondItem="LVT-wi-cCH" secondAttribute="top" id="Om9-D6-7Jq"/>
+                            <constraint firstItem="Rfm-fj-CQp" firstAttribute="top" secondItem="fJA-KT-n21" secondAttribute="top" id="QAT-S8-uBQ"/>
+                            <constraint firstItem="OhB-JB-Bet" firstAttribute="leading" secondItem="g8P-um-BLC" secondAttribute="trailing" constant="11" id="Qhg-c9-pIQ"/>
+                            <constraint firstItem="Kdo-cy-rGh" firstAttribute="leading" secondItem="45Q-08-HUF" secondAttribute="trailing" constant="8" id="SPF-aT-BN2"/>
+                            <constraint firstItem="jQh-bk-nbN" firstAttribute="top" secondItem="6hy-q4-1zs" secondAttribute="bottom" constant="8" id="SRw-qB-dnK"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ST8-gl-WiD" secondAttribute="trailing" constant="20" symbolic="YES" id="TNq-9F-VD8"/>
+                            <constraint firstItem="x8x-MZ-P8V" firstAttribute="leading" secondItem="wFF-9E-ba9" secondAttribute="leading" id="U7N-g1-NMS"/>
+                            <constraint firstItem="Jmk-5Z-6PF" firstAttribute="leading" secondItem="g8P-um-BLC" secondAttribute="leading" id="UBO-B7-a5u"/>
+                            <constraint firstItem="2sr-wV-f9c" firstAttribute="top" secondItem="oYJ-co-9hI" secondAttribute="top" id="UXA-Wd-j3h"/>
+                            <constraint firstItem="oYJ-co-9hI" firstAttribute="leading" secondItem="fhS-aR-YvQ" secondAttribute="trailing" constant="10" id="UhP-Yt-LhJ"/>
+                            <constraint firstItem="x8x-MZ-P8V" firstAttribute="top" secondItem="wFF-9E-ba9" secondAttribute="bottom" constant="8" id="VwD-01-1Ho"/>
+                            <constraint firstItem="BZs-be-yqU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W9n-nc-Z8f"/>
+                            <constraint firstItem="fJA-KT-n21" firstAttribute="leading" secondItem="phc-xm-WGl" secondAttribute="trailing" constant="11" id="Wbd-Gk-XRz"/>
+                            <constraint firstItem="fJA-KT-n21" firstAttribute="top" secondItem="phc-xm-WGl" secondAttribute="top" id="Wd4-hO-UVy"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wFF-9E-ba9" secondAttribute="trailingMargin" id="YX4-Yg-sfv"/>
+                            <constraint firstItem="M9Z-fn-6tF" firstAttribute="top" secondItem="jZx-GZ-hVb" secondAttribute="top" id="YlY-Fl-2jd"/>
+                            <constraint firstItem="a6v-vD-zQv" firstAttribute="leading" secondItem="9hf-Qh-ydU" secondAttribute="trailing" constant="8" id="YzM-vi-sWs"/>
+                            <constraint firstItem="ST8-gl-WiD" firstAttribute="leading" secondItem="q1z-Km-Gua" secondAttribute="trailing" constant="10" id="ZJQ-4N-Lfb"/>
+                            <constraint firstItem="dDD-wc-dC8" firstAttribute="leading" secondItem="Jmk-5Z-6PF" secondAttribute="trailing" constant="11" id="ZuJ-nh-oFQ"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MCy-D3-AHg" secondAttribute="trailing" constant="20" symbolic="YES" id="a48-Je-HXu"/>
+                            <constraint firstItem="l7H-TB-dX9" firstAttribute="leading" secondItem="6hy-q4-1zs" secondAttribute="trailing" constant="10" id="cN0-5l-krb"/>
+                            <constraint firstItem="q1z-Km-Gua" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cX3-BS-xVv"/>
+                            <constraint firstItem="dDD-wc-dC8" firstAttribute="top" secondItem="g8P-um-BLC" secondAttribute="bottom" constant="8" id="dT2-PP-FxZ"/>
+                            <constraint firstItem="a6v-vD-zQv" firstAttribute="top" secondItem="9hf-Qh-ydU" secondAttribute="top" id="dV0-W6-6IL"/>
+                            <constraint firstItem="cEp-jq-BBe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Rfm-fj-CQp" secondAttribute="trailing" constant="8" symbolic="YES" id="ecB-9a-zpq"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="q1z-Km-Gua" secondAttribute="trailingMargin" id="f5l-zH-KTP"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jZx-GZ-hVb" secondAttribute="trailing" constant="20" symbolic="YES" id="fAd-cm-2z9"/>
+                            <constraint firstAttribute="trailing" secondItem="2sr-wV-f9c" secondAttribute="trailing" constant="109" id="gIl-FZ-HfU"/>
+                            <constraint firstAttribute="trailing" secondItem="cEp-jq-BBe" secondAttribute="trailing" constant="45" id="gnb-Y4-X5i"/>
+                            <constraint firstItem="OhB-JB-Bet" firstAttribute="top" secondItem="g8P-um-BLC" secondAttribute="top" id="gtX-Ye-gST"/>
+                            <constraint firstItem="MCy-D3-AHg" firstAttribute="leading" secondItem="q1z-Km-Gua" secondAttribute="leading" id="hUu-ig-ahG"/>
+                            <constraint firstItem="phc-xm-WGl" firstAttribute="leading" secondItem="x8x-MZ-P8V" secondAttribute="trailing" constant="11" id="hdC-Fx-Fsp"/>
+                            <constraint firstItem="M9Z-fn-6tF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jZx-GZ-hVb" secondAttribute="trailing" constant="8" symbolic="YES" id="hhi-r5-FdT"/>
+                            <constraint firstItem="x8x-MZ-P8V" firstAttribute="top" secondItem="wFF-9E-ba9" secondAttribute="bottom" constant="8" id="iwv-hv-d21"/>
+                            <constraint firstItem="45Q-08-HUF" firstAttribute="top" secondItem="fT2-Ol-NsA" secondAttribute="top" id="jJ5-EC-eUj"/>
+                            <constraint firstItem="MbJ-bd-d1O" firstAttribute="leading" secondItem="jQh-bk-nbN" secondAttribute="trailing" constant="10" id="kdj-GY-BdD"/>
+                            <constraint firstItem="g8P-um-BLC" firstAttribute="top" secondItem="TNZ-Fx-f7I" secondAttribute="bottom" constant="8" id="kmZ-DO-0EH"/>
+                            <constraint firstItem="TNZ-Fx-f7I" firstAttribute="leading" secondItem="x8x-MZ-P8V" secondAttribute="leading" id="lzO-Z6-LNh"/>
+                            <constraint firstItem="l7H-TB-dX9" firstAttribute="top" secondItem="6hy-q4-1zs" secondAttribute="top" id="m4u-ll-MFj"/>
+                            <constraint firstItem="fT2-Ol-NsA" firstAttribute="top" secondItem="jQh-bk-nbN" secondAttribute="bottom" constant="8" id="mY5-w6-Nfh"/>
+                            <constraint firstAttribute="trailing" secondItem="u29-2Z-VR5" secondAttribute="trailing" constant="109" id="mso-Eh-PLm"/>
+                            <constraint firstItem="9hf-Qh-ydU" firstAttribute="top" secondItem="ST8-gl-WiD" secondAttribute="top" id="pwS-XU-g8D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HZs-Uq-O0O" secondAttribute="trailing" id="qgh-8J-sAa"/>
+                            <constraint firstItem="wFF-9E-ba9" firstAttribute="top" secondItem="fT2-Ol-NsA" secondAttribute="bottom" constant="8" id="rHz-lB-zJd"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="x8x-MZ-P8V" secondAttribute="trailing" constant="20" symbolic="YES" id="rUi-Bv-dUF"/>
+                            <constraint firstItem="HZs-Uq-O0O" firstAttribute="top" secondItem="BZs-be-yqU" secondAttribute="bottom" constant="8" id="s6B-T7-vLv"/>
+                            <constraint firstItem="LVT-wi-cCH" firstAttribute="top" secondItem="MbJ-bd-d1O" secondAttribute="top" id="ue4-6x-xvD"/>
+                            <constraint firstItem="LVT-wi-cCH" firstAttribute="leading" secondItem="MbJ-bd-d1O" secondAttribute="trailing" constant="10" id="vEv-ai-gns"/>
+                            <constraint firstItem="AbQ-af-eHt" firstAttribute="leading" secondItem="OhB-JB-Bet" secondAttribute="trailing" constant="11" id="wcV-bX-s62"/>
+                            <constraint firstItem="pki-1I-GQ8" firstAttribute="leading" secondItem="l7H-TB-dX9" secondAttribute="trailing" constant="8" id="ww2-Wq-r2n"/>
+                            <constraint firstItem="q1z-Km-Gua" firstAttribute="top" secondItem="qsT-vo-vLl" secondAttribute="bottom" constant="24" id="x29-4y-CQe"/>
+                            <constraint firstItem="pki-1I-GQ8" firstAttribute="top" secondItem="l7H-TB-dX9" secondAttribute="top" id="zab-4t-VGo"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="getVideoURLLabel" destination="HZs-Uq-O0O" id="zv6-kG-B3T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="107.49625187406298"/>
         </scene>
     </scenes>
 </document>
