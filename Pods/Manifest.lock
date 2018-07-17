@@ -1,0 +1,21 @@
+PODS:
+  - Flurry-iOS-SDK/FlurryAds (8.6.1):
+    - Flurry-iOS-SDK/FlurrySDK
+  - Flurry-iOS-SDK/FlurrySDK (8.6.1)
+  - Flurry-iOS-SDK/TumblrAPI (8.6.1):
+    - Flurry-iOS-SDK/FlurryAds
+    - Flurry-iOS-SDK/FlurrySDK
+
+DEPENDENCIES:
+  - Flurry-iOS-SDK/TumblrAPI
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Flurry-iOS-SDK
+
+SPEC CHECKSUMS:
+  Flurry-iOS-SDK: daffe3d0afa95b7b0f1a803f2b708a926ecbf833
+
+PODFILE CHECKSUM: 88df4728fde36533e5da7da8db271fabcd03d544
+
+COCOAPODS: 1.5.3
