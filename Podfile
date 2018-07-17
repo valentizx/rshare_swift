@@ -7,5 +7,7 @@ end
 target 'sharekit' do
     use_frameworks!
     pod 'Flurry-iOS-SDK/TumblrAPI'
+    pod 'FBSDKShareKit'
+    pod 'TwitterKit'
     
 end
