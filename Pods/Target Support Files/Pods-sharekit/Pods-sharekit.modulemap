@@ -1,6 +1,0 @@
-framework module Pods_sharekit {
-  umbrella header "Pods-sharekit-umbrella.h"
-
-  export *
-  module * { export * }
-}
