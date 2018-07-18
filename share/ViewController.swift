@@ -13,7 +13,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        WXApi.isWXAppInstalled()
+    
     }
 
     @IBAction func shareFbWeb(_ sender: Any) {

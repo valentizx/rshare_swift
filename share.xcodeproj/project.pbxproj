@@ -8,18 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		4AA94671A8A5B12F79FE5BE0 /* Pods_share.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1D0A233ED136D1FA6229DFE /* Pods_share.framework */; };
-		BE71D23DD889B600318FD10E /* Pods_sharekit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D41C7A60538DE066FBB32D52 /* Pods_sharekit.framework */; };
-		CF72E1EC20FDD49000DF3684 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF72E1E920FDD48F00DF3684 /* TwitterKit.framework */; };
-		CF72E1ED20FDD49000DF3684 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF72E1EA20FDD49000DF3684 /* TwitterCore.framework */; };
+		CF07FC6320FECC890028C98C /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF72E1F120FDD58200DF3684 /* libWeChatSDK.a */; };
+		CF07FC6C20FECD870028C98C /* RPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07FC6920FECD870028C98C /* RPlatform.swift */; };
+		CF07FC6D20FECD870028C98C /* RShare.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07FC6B20FECD870028C98C /* RShare.swift */; };
+		CF07FC7320FECDA00028C98C /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CF07FC6F20FECDA00028C98C /* WeiboSDK.bundle */; };
+		CF07FC7420FECDA00028C98C /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF07FC7020FECDA00028C98C /* libWeiboSDK.a */; };
+		CF07FC7620FECDDB0028C98C /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF07FC7520FECDDB0028C98C /* TencentOpenAPI.framework */; };
+		CF07FC7820FECF340028C98C /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF07FC7720FECF330028C98C /* Photos.framework */; };
+		CF07FC7A20FECF410028C98C /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF07FC7920FECF410028C98C /* AssetsLibrary.framework */; };
+		CF72E1F920FDD62500DF3684 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF72E1F820FDD62500DF3684 /* SystemConfiguration.framework */; };
+		CF72E1FB20FDD63300DF3684 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CF72E1FA20FDD63300DF3684 /* libz.tbd */; };
+		CF72E1FD20FDD64300DF3684 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CF72E1FC20FDD64300DF3684 /* libsqlite3.0.tbd */; };
+		CF72E1FF20FDD66B00DF3684 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CF72E1FE20FDD66B00DF3684 /* libc++.tbd */; };
+		CF72E20120FDD69300DF3684 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF72E20020FDD69300DF3684 /* Security.framework */; };
+		CF72E20320FDD6A100DF3684 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF72E20220FDD6A000DF3684 /* CoreTelephony.framework */; };
+		CF72E20520FDD6B200DF3684 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF72E20420FDD6B200DF3684 /* CFNetwork.framework */; };
 		CFA077EF20E3E2280058018D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA077EE20E3E2280058018D /* AppDelegate.swift */; };
 		CFA077F120E3E2280058018D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA077F020E3E2280058018D /* ViewController.swift */; };
 		CFA077F420E3E2280058018D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA077F220E3E2280058018D /* Main.storyboard */; };
 		CFA077F620E3E22A0058018D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFA077F520E3E22A0058018D /* Assets.xcassets */; };
 		CFA077F920E3E22A0058018D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA077F720E3E22A0058018D /* LaunchScreen.storyboard */; };
 		CFA0780420E3E22A0058018D /* shareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA0780320E3E22A0058018D /* shareUITests.swift */; };
-		CFF0819120FD910B000F5D6D /* sharekit.h in Headers */ = {isa = PBXBuildFile; fileRef = CFF0818F20FD910B000F5D6D /* sharekit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CFF0819420FD910B000F5D6D /* sharekit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF0818D20FD910B000F5D6D /* sharekit.framework */; };
-		CFF0819520FD910B000F5D6D /* sharekit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CFF0818D20FD910B000F5D6D /* sharekit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,13 +39,6 @@
 			remoteGlobalIDString = CFA077EA20E3E2280058018D;
 			remoteInfo = share;
 		};
-		CFF0819220FD910B000F5D6D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CFA077E320E3E2280058018D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CFF0818C20FD910B000F5D6D;
-			remoteInfo = sharekit;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,7 +48,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CFF0819520FD910B000F5D6D /* sharekit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,9 +60,31 @@
 		501E8DEFB638E46CB77119C5 /* Pods-share.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-share.release.xcconfig"; path = "Pods/Target Support Files/Pods-share/Pods-share.release.xcconfig"; sourceTree = "<group>"; };
 		695A892D7ABF136A861558D8 /* Pods-sharekit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sharekit.release.xcconfig"; path = "Pods/Target Support Files/Pods-sharekit/Pods-sharekit.release.xcconfig"; sourceTree = "<group>"; };
 		B1D0A233ED136D1FA6229DFE /* Pods_share.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_share.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF07FC6920FECD870028C98C /* RPlatform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPlatform.swift; sourceTree = "<group>"; };
+		CF07FC6B20FECD870028C98C /* RShare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RShare.swift; sourceTree = "<group>"; };
+		CF07FC6F20FECDA00028C98C /* WeiboSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WeiboSDK.bundle; sourceTree = "<group>"; };
+		CF07FC7020FECDA00028C98C /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
+		CF07FC7120FECDA00028C98C /* WBHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBHttpRequest.h; sourceTree = "<group>"; };
+		CF07FC7220FECDA00028C98C /* WeiboSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboSDK.h; sourceTree = "<group>"; };
+		CF07FC7520FECDDB0028C98C /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TencentOpenAPI.framework; path = thirdSdk/TencentOpenAPI.framework; sourceTree = "<group>"; };
+		CF07FC7720FECF330028C98C /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		CF07FC7920FECF410028C98C /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		CF72E1E820FDD48F00DF3684 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/TwitterKitResources.bundle; sourceTree = "<group>"; };
 		CF72E1E920FDD48F00DF3684 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
 		CF72E1EA20FDD49000DF3684 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
+		CF72E1EE20FDD58100DF3684 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXApiObject.h; path = thirdSdk/WXApiObject.h; sourceTree = "<group>"; };
+		CF72E1EF20FDD58200DF3684 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WechatAuthSDK.h; path = thirdSdk/WechatAuthSDK.h; sourceTree = "<group>"; };
+		CF72E1F020FDD58200DF3684 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.txt; path = thirdSdk/README.txt; sourceTree = "<group>"; };
+		CF72E1F120FDD58200DF3684 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWeChatSDK.a; path = thirdSdk/libWeChatSDK.a; sourceTree = "<group>"; };
+		CF72E1F220FDD58200DF3684 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXApi.h; path = thirdSdk/WXApi.h; sourceTree = "<group>"; };
+		CF72E1F820FDD62500DF3684 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CF72E1FA20FDD63300DF3684 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		CF72E1FC20FDD64300DF3684 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		CF72E1FE20FDD66B00DF3684 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		CF72E20020FDD69300DF3684 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		CF72E20220FDD6A000DF3684 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		CF72E20420FDD6B200DF3684 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		CF72E20E20FDDDA000DF3684 /* Bridge-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
 		CFA077EB20E3E2280058018D /* share.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = share.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFA077EE20E3E2280058018D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFA077F020E3E2280058018D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,9 +95,6 @@
 		CFA077FF20E3E22A0058018D /* shareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = shareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFA0780320E3E22A0058018D /* shareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shareUITests.swift; sourceTree = "<group>"; };
 		CFA0780520E3E22B0058018D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CFF0818D20FD910B000F5D6D /* sharekit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = sharekit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFF0818F20FD910B000F5D6D /* sharekit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sharekit.h; sourceTree = "<group>"; };
-		CFF0819020FD910B000F5D6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D41C7A60538DE066FBB32D52 /* Pods_sharekit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sharekit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -83,7 +103,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFF0819420FD910B000F5D6D /* sharekit.framework in Frameworks */,
+				CF07FC7A20FECF410028C98C /* AssetsLibrary.framework in Frameworks */,
+				CF07FC7820FECF340028C98C /* Photos.framework in Frameworks */,
+				CF07FC6320FECC890028C98C /* libWeChatSDK.a in Frameworks */,
+				CF72E20520FDD6B200DF3684 /* CFNetwork.framework in Frameworks */,
+				CF72E20320FDD6A100DF3684 /* CoreTelephony.framework in Frameworks */,
+				CF72E20120FDD69300DF3684 /* Security.framework in Frameworks */,
+				CF72E1FF20FDD66B00DF3684 /* libc++.tbd in Frameworks */,
+				CF07FC7420FECDA00028C98C /* libWeiboSDK.a in Frameworks */,
+				CF72E1FD20FDD64300DF3684 /* libsqlite3.0.tbd in Frameworks */,
+				CF72E1FB20FDD63300DF3684 /* libz.tbd in Frameworks */,
+				CF07FC7620FECDDB0028C98C /* TencentOpenAPI.framework in Frameworks */,
+				CF72E1F920FDD62500DF3684 /* SystemConfiguration.framework in Frameworks */,
 				4AA94671A8A5B12F79FE5BE0 /* Pods_share.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,16 +123,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CFF0818920FD910B000F5D6D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CF72E1EC20FDD49000DF3684 /* TwitterKit.framework in Frameworks */,
-				CF72E1ED20FDD49000DF3684 /* TwitterCore.framework in Frameworks */,
-				BE71D23DD889B600318FD10E /* Pods_sharekit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,12 +140,41 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CF07FC6820FECD870028C98C /* sharekit */ = {
+			isa = PBXGroup;
+			children = (
+				CF07FC6920FECD870028C98C /* RPlatform.swift */,
+				CF07FC6A20FECD870028C98C /* wechat */,
+				CF07FC6B20FECD870028C98C /* RShare.swift */,
+			);
+			path = sharekit;
+			sourceTree = "<group>";
+		};
+		CF07FC6A20FECD870028C98C /* wechat */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = wechat;
+			sourceTree = "<group>";
+		};
+		CF07FC6E20FECDA00028C98C /* libWeiboSDK */ = {
+			isa = PBXGroup;
+			children = (
+				CF07FC6F20FECDA00028C98C /* WeiboSDK.bundle */,
+				CF07FC7020FECDA00028C98C /* libWeiboSDK.a */,
+				CF07FC7120FECDA00028C98C /* WBHttpRequest.h */,
+				CF07FC7220FECDA00028C98C /* WeiboSDK.h */,
+			);
+			name = libWeiboSDK;
+			path = thirdSdk/libWeiboSDK;
+			sourceTree = "<group>";
+		};
 		CFA077E220E3E2280058018D = {
 			isa = PBXGroup;
 			children = (
+				CF07FC6820FECD870028C98C /* sharekit */,
 				CFA077ED20E3E2280058018D /* share */,
 				CFA0780220E3E22A0058018D /* shareUITests */,
-				CFF0818E20FD910B000F5D6D /* sharekit */,
 				CFA077EC20E3E2280058018D /* Products */,
 				6260FF85D91CD02E2F1B0C15 /* Pods */,
 				E5A0906A306A9995F7A10ECA /* Frameworks */,
@@ -136,7 +186,6 @@
 			children = (
 				CFA077EB20E3E2280058018D /* share.app */,
 				CFA077FF20E3E22A0058018D /* shareUITests.xctest */,
-				CFF0818D20FD910B000F5D6D /* sharekit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,6 +193,7 @@
 		CFA077ED20E3E2280058018D /* share */ = {
 			isa = PBXGroup;
 			children = (
+				CF72E20E20FDDDA000DF3684 /* Bridge-Header.h */,
 				CFA077EE20E3E2280058018D /* AppDelegate.swift */,
 				CFA077F020E3E2280058018D /* ViewController.swift */,
 				CFA077F220E3E2280058018D /* Main.storyboard */,
@@ -163,18 +213,25 @@
 			path = shareUITests;
 			sourceTree = "<group>";
 		};
-		CFF0818E20FD910B000F5D6D /* sharekit */ = {
-			isa = PBXGroup;
-			children = (
-				CFF0818F20FD910B000F5D6D /* sharekit.h */,
-				CFF0819020FD910B000F5D6D /* Info.plist */,
-			);
-			path = sharekit;
-			sourceTree = "<group>";
-		};
 		E5A0906A306A9995F7A10ECA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CF07FC7920FECF410028C98C /* AssetsLibrary.framework */,
+				CF07FC7720FECF330028C98C /* Photos.framework */,
+				CF07FC7520FECDDB0028C98C /* TencentOpenAPI.framework */,
+				CF07FC6E20FECDA00028C98C /* libWeiboSDK */,
+				CF72E20420FDD6B200DF3684 /* CFNetwork.framework */,
+				CF72E20220FDD6A000DF3684 /* CoreTelephony.framework */,
+				CF72E20020FDD69300DF3684 /* Security.framework */,
+				CF72E1FE20FDD66B00DF3684 /* libc++.tbd */,
+				CF72E1FC20FDD64300DF3684 /* libsqlite3.0.tbd */,
+				CF72E1FA20FDD63300DF3684 /* libz.tbd */,
+				CF72E1F820FDD62500DF3684 /* SystemConfiguration.framework */,
+				CF72E1F120FDD58200DF3684 /* libWeChatSDK.a */,
+				CF72E1F020FDD58200DF3684 /* README.txt */,
+				CF72E1EF20FDD58200DF3684 /* WechatAuthSDK.h */,
+				CF72E1F220FDD58200DF3684 /* WXApi.h */,
+				CF72E1EE20FDD58100DF3684 /* WXApiObject.h */,
 				CF72E1EA20FDD49000DF3684 /* TwitterCore.framework */,
 				CF72E1E920FDD48F00DF3684 /* TwitterKit.framework */,
 				CF72E1E820FDD48F00DF3684 /* TwitterKitResources.bundle */,
@@ -185,17 +242,6 @@
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		CFF0818A20FD910B000F5D6D /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CFF0819120FD910B000F5D6D /* sharekit.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		CFA077EA20E3E2280058018D /* share */ = {
@@ -212,7 +258,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				CFF0819320FD910B000F5D6D /* PBXTargetDependency */,
 			);
 			name = share;
 			productName = share;
@@ -237,25 +282,6 @@
 			productReference = CFA077FF20E3E22A0058018D /* shareUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		CFF0818C20FD910B000F5D6D /* sharekit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CFF0819820FD910B000F5D6D /* Build configuration list for PBXNativeTarget "sharekit" */;
-			buildPhases = (
-				9D67D6F777BF834D7FD60353 /* [CP] Check Pods Manifest.lock */,
-				CFF0818820FD910B000F5D6D /* Sources */,
-				CFF0818920FD910B000F5D6D /* Frameworks */,
-				CFF0818A20FD910B000F5D6D /* Headers */,
-				CFF0818B20FD910B000F5D6D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = sharekit;
-			productName = sharekit;
-			productReference = CFF0818D20FD910B000F5D6D /* sharekit.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -272,9 +298,6 @@
 					CFA077FE20E3E22A0058018D = {
 						CreatedOnToolsVersion = 9.4;
 						TestTargetID = CFA077EA20E3E2280058018D;
-					};
-					CFF0818C20FD910B000F5D6D = {
-						CreatedOnToolsVersion = 9.4;
 					};
 				};
 			};
@@ -293,7 +316,6 @@
 			targets = (
 				CFA077EA20E3E2280058018D /* share */,
 				CFA077FE20E3E22A0058018D /* shareUITests */,
-				CFF0818C20FD910B000F5D6D /* sharekit */,
 			);
 		};
 /* End PBXProject section */
@@ -306,17 +328,11 @@
 				CFA077F920E3E22A0058018D /* LaunchScreen.storyboard in Resources */,
 				CFA077F620E3E22A0058018D /* Assets.xcassets in Resources */,
 				CFA077F420E3E2280058018D /* Main.storyboard in Resources */,
+				CF07FC7320FECDA00028C98C /* WeiboSDK.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CFA077FD20E3E22A0058018D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CFF0818B20FD910B000F5D6D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -350,24 +366,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-share/Pods-share-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9D67D6F777BF834D7FD60353 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-sharekit-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		D780738EE2B47D8BDACDC6FD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -393,6 +391,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF07FC6D20FECD870028C98C /* RShare.swift in Sources */,
+				CF07FC6C20FECD870028C98C /* RPlatform.swift in Sources */,
 				CFA077F120E3E2280058018D /* ViewController.swift in Sources */,
 				CFA077EF20E3E2280058018D /* AppDelegate.swift in Sources */,
 			);
@@ -406,13 +406,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CFF0818820FD910B000F5D6D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -420,11 +413,6 @@
 			isa = PBXTargetDependency;
 			target = CFA077EA20E3E2280058018D /* share */;
 			targetProxy = CFA0780020E3E22A0058018D /* PBXContainerItemProxy */;
-		};
-		CFF0819320FD910B000F5D6D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CFF0818C20FD910B000F5D6D /* sharekit */;
-			targetProxy = CFF0819220FD910B000F5D6D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -566,16 +554,28 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 44D4F4E124A1BA88BFACB138 /* Pods-share.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ETBLXR7UGM;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/thirdSdk",
+				);
 				INFOPLIST_FILE = share/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/thirdSdk",
+					"$(PROJECT_DIR)/thirdSdk/libWeiboSDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = rex.me.share;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "share/Bridge-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -585,16 +585,28 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 501E8DEFB638E46CB77119C5 /* Pods-share.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ETBLXR7UGM;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/thirdSdk",
+				);
 				INFOPLIST_FILE = share/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/thirdSdk",
+					"$(PROJECT_DIR)/thirdSdk/libWeiboSDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = rex.me.share;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "share/Bridge-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -640,76 +652,6 @@
 			};
 			name = Release;
 		};
-		CFF0819620FD910B000F5D6D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0892D6C34671A30DCF11C1AA /* Pods-sharekit.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = ETBLXR7UGM;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/thirdSdk",
-					"$(PROJECT_DIR)",
-				);
-				INFOPLIST_FILE = sharekit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = rex.me.sharekit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		CFF0819720FD910B000F5D6D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 695A892D7ABF136A861558D8 /* Pods-sharekit.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = ETBLXR7UGM;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/thirdSdk",
-					"$(PROJECT_DIR)",
-				);
-				INFOPLIST_FILE = sharekit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = rex.me.sharekit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -736,15 +678,6 @@
 			buildConfigurations = (
 				CFA0780C20E3E22B0058018D /* Debug */,
 				CFA0780D20E3E22B0058018D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CFF0819820FD910B000F5D6D /* Build configuration list for PBXNativeTarget "sharekit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CFF0819620FD910B000F5D6D /* Debug */,
-				CFF0819720FD910B000F5D6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
