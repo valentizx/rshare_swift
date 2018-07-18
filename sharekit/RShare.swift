@@ -53,7 +53,7 @@ enum Mode {
     case ShareModeSystem
 }
 
-typealias shareCompletion = (_ paltform : RShareSDKPlatform,_ result : ShareResult,_ errorInfo : String?) -> Void
+typealias RShareCompletion = (_ paltform : RShareSDKPlatform,_ result : ShareResult,_ errorInfo : String?) -> Void
 
 class RShare: NSObject {
 

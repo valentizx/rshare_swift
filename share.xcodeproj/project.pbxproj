@@ -16,6 +16,12 @@
 		CF07FC7620FECDDB0028C98C /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF07FC7520FECDDB0028C98C /* TencentOpenAPI.framework */; };
 		CF07FC7820FECF340028C98C /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF07FC7720FECF330028C98C /* Photos.framework */; };
 		CF07FC7A20FECF410028C98C /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF07FC7920FECF410028C98C /* AssetsLibrary.framework */; };
+		CF07FC7C20FED2710028C98C /* RWechatManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07FC7B20FED2710028C98C /* RWechatManager.swift */; };
+		CF07FC7E20FEDE2E0028C98C /* RWechatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07FC7D20FEDE2E0028C98C /* RWechatHelper.swift */; };
+		CF07FC8320FF1DB00028C98C /* ca.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CF07FC8020FF1DB00028C98C /* ca.mp4 */; };
+		CF07FC8420FF1DB00028C98C /* Liberation.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CF07FC8120FF1DB00028C98C /* Liberation.pdf */; };
+		CF07FC8520FF1DB00028C98C /* list.docx in Resources */ = {isa = PBXBuildFile; fileRef = CF07FC8220FF1DB00028C98C /* list.docx */; };
+		CF07FC8820FF29FD0028C98C /* RSinaWeiboManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07FC8720FF29FD0028C98C /* RSinaWeiboManager.swift */; };
 		CF72E1F920FDD62500DF3684 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF72E1F820FDD62500DF3684 /* SystemConfiguration.framework */; };
 		CF72E1FB20FDD63300DF3684 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CF72E1FA20FDD63300DF3684 /* libz.tbd */; };
 		CF72E1FD20FDD64300DF3684 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CF72E1FC20FDD64300DF3684 /* libsqlite3.0.tbd */; };
@@ -69,6 +75,12 @@
 		CF07FC7520FECDDB0028C98C /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TencentOpenAPI.framework; path = thirdSdk/TencentOpenAPI.framework; sourceTree = "<group>"; };
 		CF07FC7720FECF330028C98C /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		CF07FC7920FECF410028C98C /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		CF07FC7B20FED2710028C98C /* RWechatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RWechatManager.swift; sourceTree = "<group>"; };
+		CF07FC7D20FEDE2E0028C98C /* RWechatHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RWechatHelper.swift; sourceTree = "<group>"; };
+		CF07FC8020FF1DB00028C98C /* ca.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ca.mp4; sourceTree = "<group>"; };
+		CF07FC8120FF1DB00028C98C /* Liberation.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Liberation.pdf; sourceTree = "<group>"; };
+		CF07FC8220FF1DB00028C98C /* list.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = list.docx; sourceTree = "<group>"; };
+		CF07FC8720FF29FD0028C98C /* RSinaWeiboManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSinaWeiboManager.swift; sourceTree = "<group>"; };
 		CF72E1E820FDD48F00DF3684 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/TwitterKitResources.bundle; sourceTree = "<group>"; };
 		CF72E1E920FDD48F00DF3684 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
 		CF72E1EA20FDD49000DF3684 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
@@ -143,6 +155,7 @@
 		CF07FC6820FECD870028C98C /* sharekit */ = {
 			isa = PBXGroup;
 			children = (
+				CF07FC8620FF29E40028C98C /* sina */,
 				CF07FC6920FECD870028C98C /* RPlatform.swift */,
 				CF07FC6A20FECD870028C98C /* wechat */,
 				CF07FC6B20FECD870028C98C /* RShare.swift */,
@@ -153,6 +166,8 @@
 		CF07FC6A20FECD870028C98C /* wechat */ = {
 			isa = PBXGroup;
 			children = (
+				CF07FC7B20FED2710028C98C /* RWechatManager.swift */,
+				CF07FC7D20FEDE2E0028C98C /* RWechatHelper.swift */,
 			);
 			path = wechat;
 			sourceTree = "<group>";
@@ -167,6 +182,24 @@
 			);
 			name = libWeiboSDK;
 			path = thirdSdk/libWeiboSDK;
+			sourceTree = "<group>";
+		};
+		CF07FC7F20FF1DB00028C98C /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				CF07FC8020FF1DB00028C98C /* ca.mp4 */,
+				CF07FC8120FF1DB00028C98C /* Liberation.pdf */,
+				CF07FC8220FF1DB00028C98C /* list.docx */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+		CF07FC8620FF29E40028C98C /* sina */ = {
+			isa = PBXGroup;
+			children = (
+				CF07FC8720FF29FD0028C98C /* RSinaWeiboManager.swift */,
+			);
+			path = sina;
 			sourceTree = "<group>";
 		};
 		CFA077E220E3E2280058018D = {
@@ -193,6 +226,7 @@
 		CFA077ED20E3E2280058018D /* share */ = {
 			isa = PBXGroup;
 			children = (
+				CF07FC7F20FF1DB00028C98C /* resource */,
 				CF72E20E20FDDDA000DF3684 /* Bridge-Header.h */,
 				CFA077EE20E3E2280058018D /* AppDelegate.swift */,
 				CFA077F020E3E2280058018D /* ViewController.swift */,
@@ -325,10 +359,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF07FC8320FF1DB00028C98C /* ca.mp4 in Resources */,
+				CF07FC8420FF1DB00028C98C /* Liberation.pdf in Resources */,
 				CFA077F920E3E22A0058018D /* LaunchScreen.storyboard in Resources */,
 				CFA077F620E3E22A0058018D /* Assets.xcassets in Resources */,
 				CFA077F420E3E2280058018D /* Main.storyboard in Resources */,
 				CF07FC7320FECDA00028C98C /* WeiboSDK.bundle in Resources */,
+				CF07FC8520FF1DB00028C98C /* list.docx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +428,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF07FC7E20FEDE2E0028C98C /* RWechatHelper.swift in Sources */,
+				CF07FC7C20FED2710028C98C /* RWechatManager.swift in Sources */,
+				CF07FC8820FF29FD0028C98C /* RSinaWeiboManager.swift in Sources */,
 				CF07FC6D20FECD870028C98C /* RShare.swift in Sources */,
 				CF07FC6C20FECD870028C98C /* RPlatform.swift in Sources */,
 				CFA077F120E3E2280058018D /* ViewController.swift in Sources */,
@@ -564,6 +604,7 @@
 					"$(PROJECT_DIR)/thirdSdk",
 				);
 				INFOPLIST_FILE = share/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -595,6 +636,7 @@
 					"$(PROJECT_DIR)/thirdSdk",
 				);
 				INFOPLIST_FILE = share/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
