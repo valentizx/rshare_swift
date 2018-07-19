@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     private let wcManager = RWechatManager.shared
     private let wbManager = RSinaWeiboManager.shared
     private let qqManager = RQqManager.shared
+    private let fbManager = RFacebookManager.shared
+    private let twManager = RTwitterManager.shared
     
     private let videoWebpageURL = "https://www.youtube.com/watch?v=DSRSgMp5X1w"
     private let shareTitle = "Liberation"
@@ -48,17 +50,32 @@ class ViewController: UIViewController {
     }
 
     @IBAction func shareFbWeb(_ sender: Any) {
+        
+        fbManager.sdkInitialize(appID: "234270717151331", secret: nil)
+        fbManager.share(webpageURL: webpageURL, quote: shareDescription, hashTag: hashTag, from: self, mode: .Native, completion: shareCompletion)
+        
     }
     @IBAction func shareFbPhotos(_ sender: Any) {
+        fbManager.sdkInitialize(appID: "234270717151331", secret: nil)
+        fbManager.share(photos: [#imageLiteral(resourceName: "c"), #imageLiteral(resourceName: "c"), #imageLiteral(resourceName: "c")], from: self, completion: shareCompletion)
     }
     
     @IBAction func shareFbVid(_ sender: Any) {
+        fbManager.sdkInitialize(appID: "234270717151331", secret: nil)
+        guard localVideoURL != nil else {
+            print("请先获取视频 URL⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️")
+            return
+        }
+        fbManager.share(localVideoURL: localVideoURL!, from: self)
     }
     
     @IBAction func shareFbMedia(_ sender: Any) {
     }
     
     @IBAction func shareTwWeb(_ sender: Any) {
+        twManager.sdkInitialize(consumerKey: "cA72pVIFxOOWWfT8t9sFLcNUS", consumerSecret: "Rc9ornOaSWTFYqFzxDIEtIcsaWoxRcVGJs6U71kAjhHcGHyEZi")
+        twManager.share(webpageURL: webpageURL, text: shareDescription, image: #imageLiteral(resourceName: "c"), from: self, completion: shareCompletion)
+        
     }
     
     @IBAction func shareInsApp(_ sender: Any) {

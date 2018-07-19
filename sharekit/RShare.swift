@@ -18,39 +18,39 @@ enum ShareResult {
     case Failure
 }
 
-enum Mode {
+enum ShareMode {
     /**
      @Displays 优先选择原生应用分享, 原生应用未安装的情况可能跳转内置 WebView 或者 Safari 进行分享.
      */
-    case ShareModeAutomatic
+    case Automatic
     /**
      @Displays 原生应用分享.
      */
-    case ShareModeNative
+    case Native
     /**
      @Displays 应用内置 UIWebView 分享.
      */
-    case ShareModeWeb
+    case Web
     /**
      @Displays the dialog in the iOS integrated share sheet, 仅对 Facebook 分享有效.
      */
-    case ShareModeSheet
+    case Sheet
     /**
      @Displays 跳转至 Safari 分享, 仅对 Facebook 分享有效.
      */
-    case ShareModeBrowser
+    case Browser
     /**
      @Displays 跳转至 Safari 进行 Feed 形式的分享, 仅对 Facebook 分享有效.
      */
-    case ShareModeFeedBrowser
+    case FeedBrowser
     /**
      @Displays 应用内置 UIWebView 的 Feed 形式分享, 仅对 Facebook 分享有效.
      */
-    case ShareModeFeed
+    case Feed
     /**
      @Displays iOS 的系统分享, 通过 Document Interaction 搭建分享凭借, 仅对 Instagram 有效.
      */
-    case ShareModeSystem
+    case System
 }
 
 typealias RShareCompletion = (_ paltform : RShareSDKPlatform,_ result : ShareResult,_ errorInfo : String?) -> Void

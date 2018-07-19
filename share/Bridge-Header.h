@@ -12,6 +12,9 @@
 #import "WXApi.h"
 #import <TencentOpenAPI/QQApiInterface.h>
 #import <TencentOpenAPI/TencentOAuth.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKShareKit/FBSDKShareKit.h>
+#import <TwitterKit/TWTRKit.h>
 #import "WeiboSDK.h"
 
 #endif /* Bridger_Header_h */

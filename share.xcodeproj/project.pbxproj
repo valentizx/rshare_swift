@@ -31,6 +31,15 @@
 		CF72E20520FDD6B200DF3684 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF72E20420FDD6B200DF3684 /* CFNetwork.framework */; };
 		CF80D15D21001F6400711D45 /* RQqManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF80D15C21001F6400711D45 /* RQqManager.swift */; };
 		CF80D15F21002A2A00711D45 /* RQqHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF80D15E21002A2A00711D45 /* RQqHelper.swift */; };
+		CF80D1622100601900711D45 /* RFacebookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF80D1612100601900711D45 /* RFacebookManager.swift */; };
+		CF80D164210060C100711D45 /* RFacebookHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF80D163210060C100711D45 /* RFacebookHelper.swift */; };
+		CF80D16721006D0B00711D45 /* RTwitterAuthHepler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF80D16621006D0B00711D45 /* RTwitterAuthHepler.swift */; };
+		CF80D16C2100714E00711D45 /* RTwitterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF80D16B2100714E00711D45 /* RTwitterManager.swift */; };
+		CF80D177210077E500711D45 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF80D173210077E400711D45 /* TwitterCore.framework */; };
+		CF80D178210077E500711D45 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF80D174210077E400711D45 /* TwitterKit.framework */; };
+		CF80D179210077E500711D45 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CF80D175210077E500711D45 /* TwitterKitResources.bundle */; };
+		CF80D17C21007AAE00711D45 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF80D17B21007AAE00711D45 /* MapKit.framework */; };
+		CF80D17E21007BAA00711D45 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF80D17D21007BAA00711D45 /* MobileCoreServices.framework */; };
 		CFA077EF20E3E2280058018D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA077EE20E3E2280058018D /* AppDelegate.swift */; };
 		CFA077F120E3E2280058018D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA077F020E3E2280058018D /* ViewController.swift */; };
 		CFA077F420E3E2280058018D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA077F220E3E2280058018D /* Main.storyboard */; };
@@ -83,9 +92,6 @@
 		CF07FC8120FF1DB00028C98C /* Liberation.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Liberation.pdf; sourceTree = "<group>"; };
 		CF07FC8220FF1DB00028C98C /* list.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = list.docx; sourceTree = "<group>"; };
 		CF07FC8720FF29FD0028C98C /* RSinaWeiboManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSinaWeiboManager.swift; sourceTree = "<group>"; };
-		CF72E1E820FDD48F00DF3684 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/TwitterKitResources.bundle; sourceTree = "<group>"; };
-		CF72E1E920FDD48F00DF3684 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
-		CF72E1EA20FDD49000DF3684 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
 		CF72E1EE20FDD58100DF3684 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXApiObject.h; path = thirdSdk/WXApiObject.h; sourceTree = "<group>"; };
 		CF72E1EF20FDD58200DF3684 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WechatAuthSDK.h; path = thirdSdk/WechatAuthSDK.h; sourceTree = "<group>"; };
 		CF72E1F020FDD58200DF3684 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.txt; path = thirdSdk/README.txt; sourceTree = "<group>"; };
@@ -101,6 +107,15 @@
 		CF72E20E20FDDDA000DF3684 /* Bridge-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
 		CF80D15C21001F6400711D45 /* RQqManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RQqManager.swift; sourceTree = "<group>"; };
 		CF80D15E21002A2A00711D45 /* RQqHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RQqHelper.swift; sourceTree = "<group>"; };
+		CF80D1612100601900711D45 /* RFacebookManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RFacebookManager.swift; sourceTree = "<group>"; };
+		CF80D163210060C100711D45 /* RFacebookHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RFacebookHelper.swift; sourceTree = "<group>"; };
+		CF80D16621006D0B00711D45 /* RTwitterAuthHepler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTwitterAuthHepler.swift; sourceTree = "<group>"; };
+		CF80D16B2100714E00711D45 /* RTwitterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTwitterManager.swift; sourceTree = "<group>"; };
+		CF80D173210077E400711D45 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterCore.framework; path = thirdSdk/TwitterCore.framework; sourceTree = "<group>"; };
+		CF80D174210077E400711D45 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterKit.framework; path = thirdSdk/TwitterKit.framework; sourceTree = "<group>"; };
+		CF80D175210077E500711D45 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = thirdSdk/TwitterKit.framework/TwitterKitResources.bundle; sourceTree = "<group>"; };
+		CF80D17B21007AAE00711D45 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CF80D17D21007BAA00711D45 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		CFA077EB20E3E2280058018D /* share.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = share.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFA077EE20E3E2280058018D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFA077F020E3E2280058018D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +134,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF80D17E21007BAA00711D45 /* MobileCoreServices.framework in Frameworks */,
+				CF80D17C21007AAE00711D45 /* MapKit.framework in Frameworks */,
 				CF07FC7A20FECF410028C98C /* AssetsLibrary.framework in Frameworks */,
 				CF07FC7820FECF340028C98C /* Photos.framework in Frameworks */,
 				CF07FC6320FECC890028C98C /* libWeChatSDK.a in Frameworks */,
@@ -128,7 +145,9 @@
 				CF72E1FF20FDD66B00DF3684 /* libc++.tbd in Frameworks */,
 				CF07FC7420FECDA00028C98C /* libWeiboSDK.a in Frameworks */,
 				CF72E1FD20FDD64300DF3684 /* libsqlite3.0.tbd in Frameworks */,
+				CF80D177210077E500711D45 /* TwitterCore.framework in Frameworks */,
 				CF72E1FB20FDD63300DF3684 /* libz.tbd in Frameworks */,
+				CF80D178210077E500711D45 /* TwitterKit.framework in Frameworks */,
 				CF07FC7620FECDDB0028C98C /* TencentOpenAPI.framework in Frameworks */,
 				CF72E1F920FDD62500DF3684 /* SystemConfiguration.framework in Frameworks */,
 				4AA94671A8A5B12F79FE5BE0 /* Pods_share.framework in Frameworks */,
@@ -159,6 +178,8 @@
 		CF07FC6820FECD870028C98C /* sharekit */ = {
 			isa = PBXGroup;
 			children = (
+				CF80D16521006C4700711D45 /* twitter */,
+				CF80D16021005FA200711D45 /* facebook */,
 				CF80D15B21001F4700711D45 /* qq */,
 				CF07FC8620FF29E40028C98C /* sina */,
 				CF07FC6A20FECD870028C98C /* wechat */,
@@ -216,6 +237,24 @@
 			path = qq;
 			sourceTree = "<group>";
 		};
+		CF80D16021005FA200711D45 /* facebook */ = {
+			isa = PBXGroup;
+			children = (
+				CF80D1612100601900711D45 /* RFacebookManager.swift */,
+				CF80D163210060C100711D45 /* RFacebookHelper.swift */,
+			);
+			path = facebook;
+			sourceTree = "<group>";
+		};
+		CF80D16521006C4700711D45 /* twitter */ = {
+			isa = PBXGroup;
+			children = (
+				CF80D16621006D0B00711D45 /* RTwitterAuthHepler.swift */,
+				CF80D16B2100714E00711D45 /* RTwitterManager.swift */,
+			);
+			path = twitter;
+			sourceTree = "<group>";
+		};
 		CFA077E220E3E2280058018D = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +303,11 @@
 		E5A0906A306A9995F7A10ECA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CF80D17D21007BAA00711D45 /* MobileCoreServices.framework */,
+				CF80D17B21007AAE00711D45 /* MapKit.framework */,
+				CF80D173210077E400711D45 /* TwitterCore.framework */,
+				CF80D174210077E400711D45 /* TwitterKit.framework */,
+				CF80D175210077E500711D45 /* TwitterKitResources.bundle */,
 				CF07FC7920FECF410028C98C /* AssetsLibrary.framework */,
 				CF07FC7720FECF330028C98C /* Photos.framework */,
 				CF07FC7520FECDDB0028C98C /* TencentOpenAPI.framework */,
@@ -280,9 +324,6 @@
 				CF72E1EF20FDD58200DF3684 /* WechatAuthSDK.h */,
 				CF72E1F220FDD58200DF3684 /* WXApi.h */,
 				CF72E1EE20FDD58100DF3684 /* WXApiObject.h */,
-				CF72E1EA20FDD49000DF3684 /* TwitterCore.framework */,
-				CF72E1E920FDD48F00DF3684 /* TwitterKit.framework */,
-				CF72E1E820FDD48F00DF3684 /* TwitterKitResources.bundle */,
 				B1D0A233ED136D1FA6229DFE /* Pods_share.framework */,
 				D41C7A60538DE066FBB32D52 /* Pods_sharekit.framework */,
 			);
@@ -373,6 +414,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF80D179210077E500711D45 /* TwitterKitResources.bundle in Resources */,
 				CF07FC8320FF1DB00028C98C /* ca.mp4 in Resources */,
 				CF07FC8420FF1DB00028C98C /* Liberation.pdf in Resources */,
 				CFA077F920E3E22A0058018D /* LaunchScreen.storyboard in Resources */,
@@ -442,13 +484,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF80D1622100601900711D45 /* RFacebookManager.swift in Sources */,
 				CF80D15F21002A2A00711D45 /* RQqHelper.swift in Sources */,
 				CF07FC7E20FEDE2E0028C98C /* RWechatHelper.swift in Sources */,
 				CF07FC7C20FED2710028C98C /* RWechatManager.swift in Sources */,
 				CF80D15D21001F6400711D45 /* RQqManager.swift in Sources */,
 				CF07FC8820FF29FD0028C98C /* RSinaWeiboManager.swift in Sources */,
+				CF80D16721006D0B00711D45 /* RTwitterAuthHepler.swift in Sources */,
+				CF80D16C2100714E00711D45 /* RTwitterManager.swift in Sources */,
 				CF07FC6D20FECD870028C98C /* RShare.swift in Sources */,
 				CF07FC6C20FECD870028C98C /* RPlatform.swift in Sources */,
+				CF80D164210060C100711D45 /* RFacebookHelper.swift in Sources */,
 				CFA077F120E3E2280058018D /* ViewController.swift in Sources */,
 				CFA077EF20E3E2280058018D /* AppDelegate.swift in Sources */,
 			);
@@ -618,6 +664,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/thirdSdk",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = share/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -650,6 +697,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/thirdSdk",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = share/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
