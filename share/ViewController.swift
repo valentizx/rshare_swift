@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     private let wcManager = RWechatManager.shared
     private let wbManager = RSinaWeiboManager.shared
+    private let qqManager = RQqManager.shared
     
     private let videoWebpageURL = "https://www.youtube.com/watch?v=DSRSgMp5X1w"
     private let shareTitle = "Liberation"
@@ -146,20 +147,40 @@ class ViewController: UIViewController {
         wbManager.share(webpageURL: webpageURL, objectID: "id", title: shareTitle, description: shareDescription, thumbImage: thumbImage, completion: shareCompletion)
     }
     @IBAction func shareTextQq(_ sender: Any) {
+        qqManager.sdkInitialize(appID: "1106463933", appKey: "4WSrOXMoeFMDNR2k")
+        qqManager.share(text: shareDescription, scene: .Automatic, completion: shareCompletion)
     }
     @IBAction func shareImgQq(_ sender: Any) {
+        qqManager.sdkInitialize(appID: "1106463933", appKey: "4WSrOXMoeFMDNR2k")
+        qqManager.share(image: #imageLiteral(resourceName: "c"), title: shareTitle, description: shareDescription, scene: .Automatic, completion: shareCompletion)
     }
     @IBAction func shareWebQq(_ sender: Any) {
+        qqManager.sdkInitialize(appID: "1106463933", appKey: "4WSrOXMoeFMDNR2k")
+        qqManager.share(webpageURL: webpageURL, title: shareTitle, description: shareDescription, thumbImage: #imageLiteral(resourceName: "c_1"), scene: .Automatic, completion: shareCompletion)
     }
     @IBAction func shareVidQq(_ sender: Any) {
+        qqManager.sdkInitialize(appID: "1106463933", appKey: "4WSrOXMoeFMDNR2k")
+        qqManager.share(videoURL: videoWebpageURL, title: shareTitle, description: shareDescription, thumbImage: #imageLiteral(resourceName: "c_1"), scene: .Automatic, completion: shareCompletion)
     }
     @IBAction func shareAudQq(_ sender: Any) {
+        qqManager.sdkInitialize(appID: "1106463933", appKey: "4WSrOXMoeFMDNR2k")
+        qqManager.share(audioStreamURL: audioStreamURL, title: shareTitle, description: shareDescription, thumbImage: #imageLiteral(resourceName: "c_1"), webpageURL: webpageURL, scene: .Automatic, completion: shareCompletion)
     }
     @IBAction func shareTextQz(_ sender: Any) {
+        qqManager.sdkInitialize(appID: "1106463933", appKey: "4WSrOXMoeFMDNR2k")
+        qqManager.share(text: shareDescription, completion: shareCompletion)
     }
     @IBAction func shareImgsQz(_ sender: Any) {
+        qqManager.sdkInitialize(appID: "1106463933", appKey: "4WSrOXMoeFMDNR2k")
+        qqManager.share(images: [#imageLiteral(resourceName: "c"), #imageLiteral(resourceName: "c"), #imageLiteral(resourceName: "c"), #imageLiteral(resourceName: "c")], description: shareDescription, completion: shareCompletion)
     }
     @IBAction func shareVidQz(_ sender: Any) {
+        guard localVideoURL != nil else {
+            print("请先获取视频 URL⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️")
+            return
+        }
+        qqManager.sdkInitialize(appID: "1106463933", appKey: "4WSrOXMoeFMDNR2k")
+        qqManager.share(videoAssetURL: localVideoURL!, description: shareDescription, completion: shareCompletion)
     }
     @IBAction func shareTextWsa(_ sender: Any) {
     }

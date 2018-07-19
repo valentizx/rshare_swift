@@ -11,6 +11,7 @@
 
 #import "WXApi.h"
 #import <TencentOpenAPI/QQApiInterface.h>
+#import <TencentOpenAPI/TencentOAuth.h>
 #import "WeiboSDK.h"
 
 #endif /* Bridger_Header_h */

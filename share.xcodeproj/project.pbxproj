@@ -29,6 +29,8 @@
 		CF72E20120FDD69300DF3684 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF72E20020FDD69300DF3684 /* Security.framework */; };
 		CF72E20320FDD6A100DF3684 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF72E20220FDD6A000DF3684 /* CoreTelephony.framework */; };
 		CF72E20520FDD6B200DF3684 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF72E20420FDD6B200DF3684 /* CFNetwork.framework */; };
+		CF80D15D21001F6400711D45 /* RQqManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF80D15C21001F6400711D45 /* RQqManager.swift */; };
+		CF80D15F21002A2A00711D45 /* RQqHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF80D15E21002A2A00711D45 /* RQqHelper.swift */; };
 		CFA077EF20E3E2280058018D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA077EE20E3E2280058018D /* AppDelegate.swift */; };
 		CFA077F120E3E2280058018D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA077F020E3E2280058018D /* ViewController.swift */; };
 		CFA077F420E3E2280058018D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFA077F220E3E2280058018D /* Main.storyboard */; };
@@ -97,6 +99,8 @@
 		CF72E20220FDD6A000DF3684 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		CF72E20420FDD6B200DF3684 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		CF72E20E20FDDDA000DF3684 /* Bridge-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridge-Header.h"; sourceTree = "<group>"; };
+		CF80D15C21001F6400711D45 /* RQqManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RQqManager.swift; sourceTree = "<group>"; };
+		CF80D15E21002A2A00711D45 /* RQqHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RQqHelper.swift; sourceTree = "<group>"; };
 		CFA077EB20E3E2280058018D /* share.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = share.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFA077EE20E3E2280058018D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFA077F020E3E2280058018D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -155,10 +159,11 @@
 		CF07FC6820FECD870028C98C /* sharekit */ = {
 			isa = PBXGroup;
 			children = (
+				CF80D15B21001F4700711D45 /* qq */,
 				CF07FC8620FF29E40028C98C /* sina */,
-				CF07FC6920FECD870028C98C /* RPlatform.swift */,
 				CF07FC6A20FECD870028C98C /* wechat */,
 				CF07FC6B20FECD870028C98C /* RShare.swift */,
+				CF07FC6920FECD870028C98C /* RPlatform.swift */,
 			);
 			path = sharekit;
 			sourceTree = "<group>";
@@ -200,6 +205,15 @@
 				CF07FC8720FF29FD0028C98C /* RSinaWeiboManager.swift */,
 			);
 			path = sina;
+			sourceTree = "<group>";
+		};
+		CF80D15B21001F4700711D45 /* qq */ = {
+			isa = PBXGroup;
+			children = (
+				CF80D15C21001F6400711D45 /* RQqManager.swift */,
+				CF80D15E21002A2A00711D45 /* RQqHelper.swift */,
+			);
+			path = qq;
 			sourceTree = "<group>";
 		};
 		CFA077E220E3E2280058018D = {
@@ -428,8 +442,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF80D15F21002A2A00711D45 /* RQqHelper.swift in Sources */,
 				CF07FC7E20FEDE2E0028C98C /* RWechatHelper.swift in Sources */,
 				CF07FC7C20FED2710028C98C /* RWechatManager.swift in Sources */,
+				CF80D15D21001F6400711D45 /* RQqManager.swift in Sources */,
 				CF07FC8820FF29FD0028C98C /* RSinaWeiboManager.swift in Sources */,
 				CF07FC6D20FECD870028C98C /* RShare.swift in Sources */,
 				CF07FC6C20FECD870028C98C /* RPlatform.swift in Sources */,
