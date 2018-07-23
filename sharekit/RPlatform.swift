@@ -18,6 +18,7 @@ enum RShareSDKPlatform {
     case QQ
     case Tumblr
     case WhatsApp
+    case Line
     case Other
 }
 
@@ -44,6 +45,8 @@ class RPlatform: NSObject {
             return WeiboSDK.isWeiboAppInstalled()
         case .Instagram:
             appString = "instagram://"
+        case .Line:
+            appString = "line://"
         case .Tumblr: break
             
         case .Other: break

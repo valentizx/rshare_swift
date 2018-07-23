@@ -15,6 +15,11 @@ class RLineManager: RShare {
     
     func share(text : String) {
         
+        if !RPlatform.isInstalled(platform: .Line) {
+            print("Line 未安装")
+            return
+        }
+        
         let urlString = "line://msg/text/?" + text.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         
         let url = URL(string: urlString)
@@ -25,8 +30,12 @@ class RLineManager: RShare {
     }
     
     func share(image : UIImage) {
-
         
+        if !RPlatform.isInstalled(platform: .Line) {
+            print("WhatsApp 未安装")
+            return
+        }
+
         let pasteboard = UIPasteboard.general
         pasteboard.setData(UIImageJPEGRepresentation(image, 0.1)!, forPasteboardType: "public.jpeg")
         
