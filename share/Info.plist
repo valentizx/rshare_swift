@@ -199,6 +199,7 @@
         <string>tencentapi.qq.reqContent</string>
         <string>tencentapi.qzone.reqContent</string>
         <string>whatsapp</string>
+        <string>line</string>
     </array>
 </dict>
 </plist>

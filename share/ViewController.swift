@@ -19,6 +19,9 @@ class ViewController: UIViewController {
     private let qqManager = RQqManager.shared
     private let fbManager = RFacebookManager.shared
     private let twManager = RTwitterManager.shared
+    private let tmManager = RTumblrManager.shared
+    private let wsaManager = RWhatsAppManager.shared
+    private let gpManager = RGooglePlusManager.shared
     
     private let videoWebpageURL = "https://www.youtube.com/watch?v=DSRSgMp5X1w"
     private let shareTitle = "Liberation"
@@ -79,12 +82,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func shareInsApp(_ sender: Any) {
-    }
-  
-    @IBAction func shareInsSys(_ sender: Any) {
+        RInstagramManager.shared.share(image: #imageLiteral(resourceName: "c"))
     }
    
     @IBAction func shareInsVid(_ sender: Any) {
+        guard localVideoURL2 != nil else {
+            print("请先获取视频 URL⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️")
+            return
+        }
+        RInstagramManager.shared.share(localVideoURL: localVideoURL2!, description: shareDescription)
     }
     @IBAction func shareTextWx(_ sender: Any) {
         wcManager.sdkInitialize(appID: "wxd471bcf3a21c7c4a", appSecret: "f71570ef272a5a6699decb264be9cdbb")
@@ -200,15 +206,36 @@ class ViewController: UIViewController {
         qqManager.share(videoAssetURL: localVideoURL!, description: shareDescription, completion: shareCompletion)
     }
     @IBAction func shareTextWsa(_ sender: Any) {
+        wsaManager.share(text: shareDescription)
+    
     }
     @IBAction func shareImgWsa(_ sender: Any) {
+        wsaManager.share(image:#imageLiteral(resourceName: "c") , from: self)
     }
     @IBAction func shareUrlGplus(_ sender: Any) {
+        gpManager.share(webpageURL: URL(string: webpageURL)!, from: self)
+        
     }
     @IBAction func shareTextTm(_ sender: Any) {
+        tmManager.sdkInitialize(consumerKey: "ZJIv7SNrKMcct5tdQy7rzzsv3b0pTxBNYWkV548LgbIDIwsnPt", consumerSecret: "7jsraXodsVSeMHMLtHg5FYyporapRTf2ahJFK2tsnV4x0fYjse")
+        tmManager.share(text: shareDescription, title: shareTitle, webpageURL: webpageURL, from: self, completion: shareCompletion)
     }
     @IBAction func shareImgTm(_ sender: Any) {
+        tmManager.sdkInitialize(consumerKey: "ZJIv7SNrKMcct5tdQy7rzzsv3b0pTxBNYWkV548LgbIDIwsnPt", consumerSecret: "7jsraXodsVSeMHMLtHg5FYyporapRTf2ahJFK2tsnV4x0fYjse")
+        tmManager.share(imageURL: netImageURL, description: shareDescription, webpageURL: webpageURL, from: self, completion: shareCompletion)
     }
+    
+    
+    @IBAction func shareTextLi(_ sender: Any) {
+        
+        RLineManager.shared.share(text: shareDescription)
+    }
+    
+    @IBAction func shareImgLi(_ sender: Any) {
+        RLineManager.shared.share(image: #imageLiteral(resourceName: "c"))
+    }
+    
+    
     @IBAction func getVideoURL(_ sender: Any) {
         
         let picker = UIImagePickerController()

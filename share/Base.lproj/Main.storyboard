@@ -78,13 +78,6 @@
                                     <action selector="shareVideoWx:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TcH-6c-cq3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7H-TB-dX9">
-                                <rect key="frame" x="142" y="134" width="86" height="30"/>
-                                <state key="normal" title="INS系统分享"/>
-                                <connections>
-                                    <action selector="shareInsSys:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7rO-TC-Ldb"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fT2-Ol-NsA">
                                 <rect key="frame" x="16" y="210" width="55" height="30"/>
                                 <state key="normal" title="WX音乐"/>
@@ -249,7 +242,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pki-1I-GQ8">
-                                <rect key="frame" x="236" y="134" width="55" height="30"/>
+                                <rect key="frame" x="140" y="134" width="55" height="30"/>
                                 <state key="normal" title="INS视频"/>
                                 <connections>
                                     <action selector="shareInsVid:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ITz-eH-DGG"/>
@@ -260,6 +253,20 @@
                                 <state key="normal" title="WX文件"/>
                                 <connections>
                                     <action selector="shareFileWx:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uLG-S8-Q8M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBw-PZ-hOr">
+                                <rect key="frame" x="193" y="400" width="47" height="30"/>
+                                <state key="normal" title="LINE文"/>
+                                <connections>
+                                    <action selector="shareTextLi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MFC-bX-8GW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tWU-H5-YQV">
+                                <rect key="frame" x="248" y="400" width="47" height="30"/>
+                                <state key="normal" title="LINE图"/>
+                                <connections>
+                                    <action selector="shareImgLi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dD9-Cr-gn7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -289,21 +296,23 @@
                             <constraint firstItem="wFF-9E-ba9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="FXX-7b-DCc"/>
                             <constraint firstItem="BZs-be-yqU" firstAttribute="top" secondItem="dDD-wc-dC8" secondAttribute="bottom" constant="8" id="FmA-Sn-B9Q"/>
                             <constraint firstItem="fhS-aR-YvQ" firstAttribute="leading" secondItem="wFF-9E-ba9" secondAttribute="trailing" constant="10" id="FzB-Gc-cAU"/>
+                            <constraint firstItem="pki-1I-GQ8" firstAttribute="leading" secondItem="6hy-q4-1zs" secondAttribute="trailing" constant="8" id="Gqr-qd-m07"/>
                             <constraint firstItem="jZx-GZ-hVb" firstAttribute="leading" secondItem="TNZ-Fx-f7I" secondAttribute="trailing" constant="11" id="Gtz-12-Px0"/>
                             <constraint firstItem="jZx-GZ-hVb" firstAttribute="top" secondItem="TNZ-Fx-f7I" secondAttribute="top" id="GzU-dS-oDz"/>
                             <constraint firstItem="45Q-08-HUF" firstAttribute="leading" secondItem="fT2-Ol-NsA" secondAttribute="trailing" constant="10" id="H2l-ly-Exi"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="l7H-TB-dX9" secondAttribute="trailing" constant="20" symbolic="YES" id="HpG-lc-pnQ"/>
                             <constraint firstItem="phc-xm-WGl" firstAttribute="top" secondItem="fhS-aR-YvQ" secondAttribute="bottom" constant="8" id="ICS-H6-xBz"/>
                             <constraint firstItem="HZs-Uq-O0O" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="IKi-ZP-6Co"/>
                             <constraint firstItem="6hy-q4-1zs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="IQy-1T-nBU"/>
                             <constraint firstItem="6hy-q4-1zs" firstAttribute="top" secondItem="MCy-D3-AHg" secondAttribute="bottom" constant="15" id="JFP-3P-T4u"/>
                             <constraint firstItem="9hf-Qh-ydU" firstAttribute="leading" secondItem="ST8-gl-WiD" secondAttribute="trailing" constant="8" id="LK8-Sv-J8j"/>
+                            <constraint firstItem="CBw-PZ-hOr" firstAttribute="top" secondItem="dDD-wc-dC8" secondAttribute="top" id="NWl-dp-cCp"/>
                             <constraint firstItem="MCy-D3-AHg" firstAttribute="top" secondItem="q1z-Km-Gua" secondAttribute="bottom" constant="15" id="O84-Ed-iOC"/>
                             <constraint firstItem="u29-2Z-VR5" firstAttribute="top" secondItem="LVT-wi-cCH" secondAttribute="top" id="Om9-D6-7Jq"/>
                             <constraint firstItem="Rfm-fj-CQp" firstAttribute="top" secondItem="fJA-KT-n21" secondAttribute="top" id="QAT-S8-uBQ"/>
                             <constraint firstItem="OhB-JB-Bet" firstAttribute="leading" secondItem="g8P-um-BLC" secondAttribute="trailing" constant="11" id="Qhg-c9-pIQ"/>
                             <constraint firstItem="Kdo-cy-rGh" firstAttribute="leading" secondItem="45Q-08-HUF" secondAttribute="trailing" constant="8" id="SPF-aT-BN2"/>
                             <constraint firstItem="jQh-bk-nbN" firstAttribute="top" secondItem="6hy-q4-1zs" secondAttribute="bottom" constant="8" id="SRw-qB-dnK"/>
+                            <constraint firstItem="tWU-H5-YQV" firstAttribute="top" secondItem="CBw-PZ-hOr" secondAttribute="top" id="TNA-mK-OHj"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ST8-gl-WiD" secondAttribute="trailing" constant="20" symbolic="YES" id="TNq-9F-VD8"/>
                             <constraint firstItem="x8x-MZ-P8V" firstAttribute="leading" secondItem="wFF-9E-ba9" secondAttribute="leading" id="U7N-g1-NMS"/>
                             <constraint firstItem="Jmk-5Z-6PF" firstAttribute="leading" secondItem="g8P-um-BLC" secondAttribute="leading" id="UBO-B7-a5u"/>
@@ -311,6 +320,7 @@
                             <constraint firstItem="oYJ-co-9hI" firstAttribute="leading" secondItem="fhS-aR-YvQ" secondAttribute="trailing" constant="10" id="UhP-Yt-LhJ"/>
                             <constraint firstItem="x8x-MZ-P8V" firstAttribute="top" secondItem="wFF-9E-ba9" secondAttribute="bottom" constant="8" id="VwD-01-1Ho"/>
                             <constraint firstItem="BZs-be-yqU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W9n-nc-Z8f"/>
+                            <constraint firstItem="pki-1I-GQ8" firstAttribute="top" secondItem="6hy-q4-1zs" secondAttribute="top" id="WQo-BA-Y08"/>
                             <constraint firstItem="fJA-KT-n21" firstAttribute="leading" secondItem="phc-xm-WGl" secondAttribute="trailing" constant="11" id="Wbd-Gk-XRz"/>
                             <constraint firstItem="fJA-KT-n21" firstAttribute="top" secondItem="phc-xm-WGl" secondAttribute="top" id="Wd4-hO-UVy"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wFF-9E-ba9" secondAttribute="trailingMargin" id="YX4-Yg-sfv"/>
@@ -318,8 +328,8 @@
                             <constraint firstItem="a6v-vD-zQv" firstAttribute="leading" secondItem="9hf-Qh-ydU" secondAttribute="trailing" constant="8" id="YzM-vi-sWs"/>
                             <constraint firstItem="ST8-gl-WiD" firstAttribute="leading" secondItem="q1z-Km-Gua" secondAttribute="trailing" constant="10" id="ZJQ-4N-Lfb"/>
                             <constraint firstItem="dDD-wc-dC8" firstAttribute="leading" secondItem="Jmk-5Z-6PF" secondAttribute="trailing" constant="11" id="ZuJ-nh-oFQ"/>
+                            <constraint firstItem="tWU-H5-YQV" firstAttribute="leading" secondItem="CBw-PZ-hOr" secondAttribute="trailing" constant="8" id="ZwM-JE-cj0"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MCy-D3-AHg" secondAttribute="trailing" constant="20" symbolic="YES" id="a48-Je-HXu"/>
-                            <constraint firstItem="l7H-TB-dX9" firstAttribute="leading" secondItem="6hy-q4-1zs" secondAttribute="trailing" constant="10" id="cN0-5l-krb"/>
                             <constraint firstItem="q1z-Km-Gua" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cX3-BS-xVv"/>
                             <constraint firstItem="dDD-wc-dC8" firstAttribute="top" secondItem="g8P-um-BLC" secondAttribute="bottom" constant="8" id="dT2-PP-FxZ"/>
                             <constraint firstItem="a6v-vD-zQv" firstAttribute="top" secondItem="9hf-Qh-ydU" secondAttribute="top" id="dV0-W6-6IL"/>
@@ -329,6 +339,7 @@
                             <constraint firstAttribute="trailing" secondItem="2sr-wV-f9c" secondAttribute="trailing" constant="109" id="gIl-FZ-HfU"/>
                             <constraint firstAttribute="trailing" secondItem="cEp-jq-BBe" secondAttribute="trailing" constant="45" id="gnb-Y4-X5i"/>
                             <constraint firstItem="OhB-JB-Bet" firstAttribute="top" secondItem="g8P-um-BLC" secondAttribute="top" id="gtX-Ye-gST"/>
+                            <constraint firstItem="CBw-PZ-hOr" firstAttribute="leading" secondItem="dDD-wc-dC8" secondAttribute="trailing" constant="8" id="h74-we-Xu1"/>
                             <constraint firstItem="MCy-D3-AHg" firstAttribute="leading" secondItem="q1z-Km-Gua" secondAttribute="leading" id="hUu-ig-ahG"/>
                             <constraint firstItem="phc-xm-WGl" firstAttribute="leading" secondItem="x8x-MZ-P8V" secondAttribute="trailing" constant="11" id="hdC-Fx-Fsp"/>
                             <constraint firstItem="M9Z-fn-6tF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jZx-GZ-hVb" secondAttribute="trailing" constant="8" symbolic="YES" id="hhi-r5-FdT"/>
@@ -337,7 +348,6 @@
                             <constraint firstItem="MbJ-bd-d1O" firstAttribute="leading" secondItem="jQh-bk-nbN" secondAttribute="trailing" constant="10" id="kdj-GY-BdD"/>
                             <constraint firstItem="g8P-um-BLC" firstAttribute="top" secondItem="TNZ-Fx-f7I" secondAttribute="bottom" constant="8" id="kmZ-DO-0EH"/>
                             <constraint firstItem="TNZ-Fx-f7I" firstAttribute="leading" secondItem="x8x-MZ-P8V" secondAttribute="leading" id="lzO-Z6-LNh"/>
-                            <constraint firstItem="l7H-TB-dX9" firstAttribute="top" secondItem="6hy-q4-1zs" secondAttribute="top" id="m4u-ll-MFj"/>
                             <constraint firstItem="fT2-Ol-NsA" firstAttribute="top" secondItem="jQh-bk-nbN" secondAttribute="bottom" constant="8" id="mY5-w6-Nfh"/>
                             <constraint firstAttribute="trailing" secondItem="u29-2Z-VR5" secondAttribute="trailing" constant="109" id="mso-Eh-PLm"/>
                             <constraint firstItem="9hf-Qh-ydU" firstAttribute="top" secondItem="ST8-gl-WiD" secondAttribute="top" id="pwS-XU-g8D"/>
@@ -348,9 +358,7 @@
                             <constraint firstItem="LVT-wi-cCH" firstAttribute="top" secondItem="MbJ-bd-d1O" secondAttribute="top" id="ue4-6x-xvD"/>
                             <constraint firstItem="LVT-wi-cCH" firstAttribute="leading" secondItem="MbJ-bd-d1O" secondAttribute="trailing" constant="10" id="vEv-ai-gns"/>
                             <constraint firstItem="AbQ-af-eHt" firstAttribute="leading" secondItem="OhB-JB-Bet" secondAttribute="trailing" constant="11" id="wcV-bX-s62"/>
-                            <constraint firstItem="pki-1I-GQ8" firstAttribute="leading" secondItem="l7H-TB-dX9" secondAttribute="trailing" constant="8" id="ww2-Wq-r2n"/>
                             <constraint firstItem="q1z-Km-Gua" firstAttribute="top" secondItem="qsT-vo-vLl" secondAttribute="bottom" constant="24" id="x29-4y-CQe"/>
-                            <constraint firstItem="pki-1I-GQ8" firstAttribute="top" secondItem="l7H-TB-dX9" secondAttribute="top" id="zab-4t-VGo"/>
                         </constraints>
                     </view>
                     <connections>
