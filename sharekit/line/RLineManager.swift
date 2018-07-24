@@ -32,13 +32,12 @@ class RLineManager: RShare {
     func share(image : UIImage) {
         
         if !RPlatform.isInstalled(platform: .Line) {
-            print("WhatsApp 未安装")
+            print("Line 未安装")
             return
         }
 
         let pasteboard = UIPasteboard.general
         pasteboard.setData(UIImageJPEGRepresentation(image, 0.1)!, forPasteboardType: "public.jpeg")
-        
     
         let urlString = "line://msg/image/%@"
         
