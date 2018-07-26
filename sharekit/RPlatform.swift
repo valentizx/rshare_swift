@@ -19,6 +19,7 @@ enum RShareSDKPlatform {
     case Tumblr
     case WhatsApp
     case Line
+    case Pinterest
     case Other
 }
 
@@ -47,6 +48,9 @@ class RPlatform: NSObject {
             appString = "instagram://"
         case .Line:
             appString = "line://"
+        case .Pinterest:
+            appString = "pinterestsdk.v1://"
+            
         case .Tumblr: break
             
         case .Other: break

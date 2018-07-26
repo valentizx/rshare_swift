@@ -1,4 +1,19 @@
 PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
   - Bolts (1.9.0):
     - Bolts/AppLinks (= 1.9.0)
     - Bolts/Tasks (= 1.9.0)
@@ -15,24 +30,43 @@ PODS:
   - Flurry-iOS-SDK/TumblrAPI (8.6.1):
     - Flurry-iOS-SDK/FlurryAds
     - Flurry-iOS-SDK/FlurrySDK
+  - PinterestSDK (1.0.2):
+    - AFNetworking (~> 3.0)
+    - SAMKeychain
+  - SAMKeychain (1.5.3)
 
 DEPENDENCIES:
   - FBSDKShareKit
   - Flurry-iOS-SDK/TumblrAPI
+  - PinterestSDK (from `https://github.com/pinterest/ios-pdk.git`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AFNetworking
     - Bolts
     - FBSDKCoreKit
     - FBSDKShareKit
     - Flurry-iOS-SDK
+    - SAMKeychain
+
+EXTERNAL SOURCES:
+  PinterestSDK:
+    :git: https://github.com/pinterest/ios-pdk.git
+
+CHECKOUT OPTIONS:
+  PinterestSDK:
+    :commit: 798ac68e083324195c05732c0dceeda8d363df0a
+    :git: https://github.com/pinterest/ios-pdk.git
 
 SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   FBSDKCoreKit: 0ff57f093b85c8c9d5aba697d3edf68a8960ce78
   FBSDKShareKit: 511d1dfc71204c0a8d69e6c5e3c964dcf0d4f3d9
   Flurry-iOS-SDK: daffe3d0afa95b7b0f1a803f2b708a926ecbf833
+  PinterestSDK: 798aced4e2ce7a9607b3df1ac77abf2c72f57734
+  SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
 
-PODFILE CHECKSUM: 042e3c1adf5a15297671a58d50387332099a058e
+PODFILE CHECKSUM: 081f855ab1a2a958b331694daf4e4c327c094dff
 
 COCOAPODS: 1.5.3

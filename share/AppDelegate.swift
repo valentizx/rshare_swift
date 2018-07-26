@@ -24,7 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // return RWechatManager.shared.application(app, open: url, options : options)
         // return RSinaWeiboManager.shared.application(app, open: url, options : options)
         // return RQqManager.shared.application(app, open: url, options : options)
-        return RFacebookManager.shared.application(app, open: url, options : options)
+        // return RFacebookManager.shared.application(app, open: url, options : options)
+        return RPinterestManager.shared.application(app, open: url, options : options)
     }
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         // return RWechatManager.shared.application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)

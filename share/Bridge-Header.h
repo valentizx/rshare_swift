@@ -16,7 +16,7 @@
 #import <FBSDKShareKit/FBSDKShareKit.h>
 #import <TwitterKit/TWTRKit.h>
 #import "WeiboSDK.h"
-//#import <Flurry_iOS_SDK/FlurryTumblr.h>
-//#import <Flurry_iOS_SDK/FlurryTumblrDelegate.h>
+#import <PinterestSDK/PinterestSDK.h>
+#import <PinterestSDK/PDKPin.h>
 
 #endif /* Bridger_Header_h */

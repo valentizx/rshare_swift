@@ -22,6 +22,7 @@
 		CF07FC8420FF1DB00028C98C /* Liberation.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CF07FC8120FF1DB00028C98C /* Liberation.pdf */; };
 		CF07FC8520FF1DB00028C98C /* list.docx in Resources */ = {isa = PBXBuildFile; fileRef = CF07FC8220FF1DB00028C98C /* list.docx */; };
 		CF07FC8820FF29FD0028C98C /* RSinaWeiboManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07FC8720FF29FD0028C98C /* RSinaWeiboManager.swift */; };
+		CF3F709621095929003E6908 /* RPinterestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3F709521095929003E6908 /* RPinterestManager.swift */; };
 		CF72E1F920FDD62500DF3684 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF72E1F820FDD62500DF3684 /* SystemConfiguration.framework */; };
 		CF72E1FB20FDD63300DF3684 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CF72E1FA20FDD63300DF3684 /* libz.tbd */; };
 		CF72E1FD20FDD64300DF3684 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CF72E1FC20FDD64300DF3684 /* libsqlite3.0.tbd */; };
@@ -97,6 +98,7 @@
 		CF07FC8120FF1DB00028C98C /* Liberation.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Liberation.pdf; sourceTree = "<group>"; };
 		CF07FC8220FF1DB00028C98C /* list.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = list.docx; sourceTree = "<group>"; };
 		CF07FC8720FF29FD0028C98C /* RSinaWeiboManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSinaWeiboManager.swift; sourceTree = "<group>"; };
+		CF3F709521095929003E6908 /* RPinterestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPinterestManager.swift; sourceTree = "<group>"; };
 		CF72E1EE20FDD58100DF3684 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXApiObject.h; path = thirdSdk/WXApiObject.h; sourceTree = "<group>"; };
 		CF72E1EF20FDD58200DF3684 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WechatAuthSDK.h; path = thirdSdk/WechatAuthSDK.h; sourceTree = "<group>"; };
 		CF72E1F020FDD58200DF3684 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.txt; path = thirdSdk/README.txt; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 		CF07FC6820FECD870028C98C /* sharekit */ = {
 			isa = PBXGroup;
 			children = (
+				CF3F7094210958F4003E6908 /* pinterest */,
 				CF75A4F521057361000B35EF /* googleplus */,
 				CF75A4F221056BFF000B35EF /* whatsapp */,
 				CF75A4EF2105690D000B35EF /* tumblr */,
@@ -241,6 +244,14 @@
 				CF07FC8720FF29FD0028C98C /* RSinaWeiboManager.swift */,
 			);
 			path = sina;
+			sourceTree = "<group>";
+		};
+		CF3F7094210958F4003E6908 /* pinterest */ = {
+			isa = PBXGroup;
+			children = (
+				CF3F709521095929003E6908 /* RPinterestManager.swift */,
+			);
+			path = pinterest;
 			sourceTree = "<group>";
 		};
 		CF75A4EF2105690D000B35EF /* tumblr */ = {
@@ -497,17 +508,23 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-share/Pods-share-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Flurry-iOS-SDK/Flurry_iOS_SDK.framework",
+				"${BUILT_PRODUCTS_DIR}/PinterestSDK/PinterestSDK.framework",
+				"${BUILT_PRODUCTS_DIR}/SAMKeychain/SAMKeychain.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Flurry_iOS_SDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinterestSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SAMKeychain.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -544,6 +561,7 @@
 				CF75A4F12105690D000B35EF /* RTumblrManager.swift in Sources */,
 				CFA8A93E21016F7A00B32FF9 /* RInstagramManager.swift in Sources */,
 				CF80D15F21002A2A00711D45 /* RQqHelper.swift in Sources */,
+				CF3F709621095929003E6908 /* RPinterestManager.swift in Sources */,
 				CF75A4F721057375000B35EF /* RGooglePlusManager.swift in Sources */,
 				CF07FC7E20FEDE2E0028C98C /* RWechatHelper.swift in Sources */,
 				CF07FC7C20FED2710028C98C /* RWechatManager.swift in Sources */,

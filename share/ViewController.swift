@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     private let tmManager = RTumblrManager.shared
     private let wsaManager = RWhatsAppManager.shared
     private let gpManager = RGooglePlusManager.shared
+    private let pinManager = RPinterestManager.shared
     
     private let videoWebpageURL = "https://www.youtube.com/watch?v=DSRSgMp5X1w"
     private let shareTitle = "Liberation"
@@ -79,6 +80,10 @@ class ViewController: UIViewController {
         twManager.sdkInitialize(consumerKey: "cA72pVIFxOOWWfT8t9sFLcNUS", consumerSecret: "Rc9ornOaSWTFYqFzxDIEtIcsaWoxRcVGJs6U71kAjhHcGHyEZi")
         twManager.share(webpageURL: webpageURL, text: shareDescription, image: #imageLiteral(resourceName: "c"), from: self, completion: shareCompletion)
         
+    }
+    @IBAction func shareImgPin(_ sender: Any) {
+        pinManager.sdkInitialize(appID: "4979706154532747851", appSecret: nil)
+        pinManager.share(imageURL: netImageURL, webpageURL: webpageURL, boardName: "123", description: shareDescription, from: self, completion: shareCompletion)
     }
     
     @IBAction func shareInsApp(_ sender: Any) {

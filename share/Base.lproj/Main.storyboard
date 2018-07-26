@@ -269,6 +269,13 @@
                                     <action selector="shareImgLi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dD9-Cr-gn7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5y4-fR-6Ur">
+                                <rect key="frame" x="109" y="89" width="77" height="30"/>
+                                <state key="normal" title="Pinterest图"/>
+                                <connections>
+                                    <action selector="shareImgPin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mCY-mE-41v"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -305,6 +312,7 @@
                             <constraint firstItem="6hy-q4-1zs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="IQy-1T-nBU"/>
                             <constraint firstItem="6hy-q4-1zs" firstAttribute="top" secondItem="MCy-D3-AHg" secondAttribute="bottom" constant="15" id="JFP-3P-T4u"/>
                             <constraint firstItem="9hf-Qh-ydU" firstAttribute="leading" secondItem="ST8-gl-WiD" secondAttribute="trailing" constant="8" id="LK8-Sv-J8j"/>
+                            <constraint firstItem="5y4-fR-6Ur" firstAttribute="top" secondItem="MCy-D3-AHg" secondAttribute="top" id="Mda-gv-Oto"/>
                             <constraint firstItem="CBw-PZ-hOr" firstAttribute="top" secondItem="dDD-wc-dC8" secondAttribute="top" id="NWl-dp-cCp"/>
                             <constraint firstItem="MCy-D3-AHg" firstAttribute="top" secondItem="q1z-Km-Gua" secondAttribute="bottom" constant="15" id="O84-Ed-iOC"/>
                             <constraint firstItem="u29-2Z-VR5" firstAttribute="top" secondItem="LVT-wi-cCH" secondAttribute="top" id="Om9-D6-7Jq"/>
@@ -358,6 +366,7 @@
                             <constraint firstItem="LVT-wi-cCH" firstAttribute="top" secondItem="MbJ-bd-d1O" secondAttribute="top" id="ue4-6x-xvD"/>
                             <constraint firstItem="LVT-wi-cCH" firstAttribute="leading" secondItem="MbJ-bd-d1O" secondAttribute="trailing" constant="10" id="vEv-ai-gns"/>
                             <constraint firstItem="AbQ-af-eHt" firstAttribute="leading" secondItem="OhB-JB-Bet" secondAttribute="trailing" constant="11" id="wcV-bX-s62"/>
+                            <constraint firstItem="5y4-fR-6Ur" firstAttribute="leading" secondItem="MCy-D3-AHg" secondAttribute="trailing" constant="8" id="wtC-24-ppl"/>
                             <constraint firstItem="q1z-Km-Gua" firstAttribute="top" secondItem="qsT-vo-vLl" secondAttribute="bottom" constant="24" id="x29-4y-CQe"/>
                         </constraints>
                     </view>
