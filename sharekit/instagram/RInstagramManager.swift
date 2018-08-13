@@ -13,6 +13,9 @@ class RInstagramManager: RShare {
     static let  shared = RInstagramManager()
     private override init() {}
     
+    override class func connect(c: (RShareSDKPlatform, RRegister) -> Void) {
+        c(.Instagram, RRegister.shared)
+    }
 
     
     fileprivate let instagramURL = URL(string: String(format: "instagram://library?AssetPath=%@", "" as CVarArg))

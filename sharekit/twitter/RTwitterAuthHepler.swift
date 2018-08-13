@@ -30,6 +30,7 @@ class RTwitterAuthHepler: NSObject {
                 completion(.Success , nil)
             } else {
                 completion(.Failure, error?.localizedDescription)
+                
             }
         }
     }

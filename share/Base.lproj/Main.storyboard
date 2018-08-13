@@ -276,6 +276,13 @@
                                     <action selector="shareImgPin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mCY-mE-41v"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNy-WW-h7B">
+                                <rect key="frame" x="232" y="324" width="54" height="30"/>
+                                <state key="normal" title="QQ文件"/>
+                                <connections>
+                                    <action selector="shareFiQ:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eci-gb-8VZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -342,6 +349,7 @@
                             <constraint firstItem="dDD-wc-dC8" firstAttribute="top" secondItem="g8P-um-BLC" secondAttribute="bottom" constant="8" id="dT2-PP-FxZ"/>
                             <constraint firstItem="a6v-vD-zQv" firstAttribute="top" secondItem="9hf-Qh-ydU" secondAttribute="top" id="dV0-W6-6IL"/>
                             <constraint firstItem="cEp-jq-BBe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Rfm-fj-CQp" secondAttribute="trailing" constant="8" symbolic="YES" id="ecB-9a-zpq"/>
+                            <constraint firstItem="WNy-WW-h7B" firstAttribute="leading" secondItem="M9Z-fn-6tF" secondAttribute="trailing" constant="8" id="egU-3h-wV6"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="q1z-Km-Gua" secondAttribute="trailingMargin" id="f5l-zH-KTP"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jZx-GZ-hVb" secondAttribute="trailing" constant="20" symbolic="YES" id="fAd-cm-2z9"/>
                             <constraint firstAttribute="trailing" secondItem="2sr-wV-f9c" secondAttribute="trailing" constant="109" id="gIl-FZ-HfU"/>
@@ -363,6 +371,7 @@
                             <constraint firstItem="wFF-9E-ba9" firstAttribute="top" secondItem="fT2-Ol-NsA" secondAttribute="bottom" constant="8" id="rHz-lB-zJd"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="x8x-MZ-P8V" secondAttribute="trailing" constant="20" symbolic="YES" id="rUi-Bv-dUF"/>
                             <constraint firstItem="HZs-Uq-O0O" firstAttribute="top" secondItem="BZs-be-yqU" secondAttribute="bottom" constant="8" id="s6B-T7-vLv"/>
+                            <constraint firstItem="WNy-WW-h7B" firstAttribute="top" secondItem="M9Z-fn-6tF" secondAttribute="top" id="tSw-rp-jOg"/>
                             <constraint firstItem="LVT-wi-cCH" firstAttribute="top" secondItem="MbJ-bd-d1O" secondAttribute="top" id="ue4-6x-xvD"/>
                             <constraint firstItem="LVT-wi-cCH" firstAttribute="leading" secondItem="MbJ-bd-d1O" secondAttribute="trailing" constant="10" id="vEv-ai-gns"/>
                             <constraint firstItem="AbQ-af-eHt" firstAttribute="leading" secondItem="OhB-JB-Bet" secondAttribute="trailing" constant="11" id="wcV-bX-s62"/>

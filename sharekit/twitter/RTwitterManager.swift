@@ -18,6 +18,14 @@ class RTwitterManager: RShare {
     func sdkInitialize(consumerKey : String, consumerSecret : String) {
         TWTRTwitter.sharedInstance().start(withConsumerKey: consumerKey, consumerSecret: consumerSecret)
     }
+    
+    class override func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        return RTwitterAuthHepler.shared.application(app, open: url, options : options)
+    }
+    
+    override class func connect(c: (RShareSDKPlatform, RRegister) -> Void) {
+        c(.Twitter, RRegister.shared)
+    }
     func share(webpageURL : String?,
                text : String?,
                image : UIImage?,
@@ -73,8 +81,4 @@ class RTwitterManager: RShare {
         }
     }
 }
-extension RTwitterManager {
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        return RTwitterAuthHepler.shared.application(app, open: url, options : options)
-    }
-}
+

@@ -56,5 +56,18 @@ enum ShareMode {
 typealias RShareCompletion = (_ paltform : RShareSDKPlatform,_ result : ShareResult,_ errorInfo : String?) -> Void
 
 class RShare: NSObject {
+    
+    class func connect(c : RConfiguration) {}
+    
+    class func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        return false
+        
+    }
+    class func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        
+        return false
+    }
+    
 
 }

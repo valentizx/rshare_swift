@@ -13,6 +13,10 @@ class RLineManager: RShare {
     static let  shared = RLineManager()
     private override init() {}
     
+    override class func connect(c: (RShareSDKPlatform, RRegister) -> Void) {
+        c(.Line, RRegister.shared)
+    }
+    
     func share(text : String) {
         
         if !RPlatform.isInstalled(platform: .Line) {

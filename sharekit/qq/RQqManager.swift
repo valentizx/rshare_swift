@@ -59,6 +59,27 @@ class RQqManager: RShare {
         let _ = TencentOAuth(appId: appID, andDelegate: self)
     }
     
+    override class func connect(c: (RShareSDKPlatform, RRegister) -> Void) {
+        c(.QQ, RRegister.shared)
+    }
+    class override func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        QQApiInterface.handleOpen(url, delegate: RQqManager.shared)
+        if TencentOAuth.canHandleOpen(url) {
+            return TencentOAuth.handleOpen(url)
+        }
+        return true
+        
+    }
+    class override func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        
+        QQApiInterface.handleOpen(url, delegate: RQqManager.shared)
+        if TencentOAuth.canHandleOpen(url) {
+            return TencentOAuth.handleOpen(url)
+        }
+        return true
+    }
+    
     
     func share(text : String, scene : RQQShareScene, completion : RShareCompletion?) {
         if !RPlatform.isInstalled(platform: .QQ) {
@@ -156,29 +177,23 @@ class RQqManager: RShare {
         shareCompletion = completion
         resultCode = QQApiInterface.sendReq(toQZone: RQqHelper.getLocalVideoReqToQZone(videoAssetURL: videoAssetURL, description: description))
     }
-
-}
-
-
-extension RQqManager {
     
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        
-        QQApiInterface.handleOpen(url, delegate: self)
-        if TencentOAuth.canHandleOpen(url) {
-            return TencentOAuth.handleOpen(url)
+    func share(fileData : Data,
+               fileName : String,
+               title : String?,
+               description : String?,
+               thumbImage : UIImage,
+               compeltion : RShareCompletion?) {
+        if !RPlatform.isInstalled(platform: .QQ) {
+            print("QQ 未安装")
+            return
         }
-        return true
+        shareCompletion = compeltion
+        let thumbImageData = UIImageJPEGRepresentation(thumbImage, 1.0)
+        resultCode = QQApiInterface.send(RQqHelper.getFileReqToQQ(fileData: fileData, fileName: fileName, thumbImageData: thumbImageData!, title: title, description: description, scene: .Dataline))
         
     }
-    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        
-        QQApiInterface.handleOpen(url, delegate: self)
-        if TencentOAuth.canHandleOpen(url) {
-            return TencentOAuth.handleOpen(url)
-        }
-        return true
-    }
+
 }
 
 extension RQqManager : TencentSessionDelegate {

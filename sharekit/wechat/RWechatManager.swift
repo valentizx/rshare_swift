@@ -48,6 +48,16 @@ class RWechatManager: RShare {
         WXApi.registerApp(appID)
     }
     
+    override class func connect(c: (RShareSDKPlatform, RRegister) -> Void) {
+        c(.Wechat, RRegister.shared)
+    }
+    class override func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        return WXApi.handleOpen(url, delegate: RWechatManager.shared)
+    }
+    class override func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        return WXApi.handleOpen(url, delegate: RWechatManager.shared)
+    }
+    
     func share(text : String, scene : RWXTargetScene, completion : RShareCompletion?) {
         
         if (!RPlatform.isInstalled(platform: .Wechat)) {
@@ -149,16 +159,6 @@ class RWechatManager: RShare {
         let req = helper.getFileMessageReq(fileData: fileData, extensionName: extensionName, title: title, thumbImage: thumbImage, scene: scene)
         WXApi.send(req)
         
-    }
-    
-}
-extension RWechatManager {
-    
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        return WXApi.handleOpen(url, delegate: self)
-    }
-    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        return WXApi.handleOpen(url, delegate: self)
     }
     
 }

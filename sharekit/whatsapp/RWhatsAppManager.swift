@@ -16,6 +16,9 @@ class RWhatsAppManager: RShare {
     fileprivate var from : UIViewController? = nil
     fileprivate var dc : UIDocumentInteractionController? = nil
     
+    override class func connect(c: (RShareSDKPlatform, RRegister) -> Void) {
+        c(.WhatsApp, RRegister.shared)
+    }
     
     func share(text : String) {
         

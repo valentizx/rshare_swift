@@ -63,6 +63,17 @@ class RQqHelper: NSObject {
         return req!
         
     }
+    class func getFileReqToQQ(fileData : Data,
+                              fileName : String,
+                              thumbImageData : Data,
+                              title : String?,
+                              description : String?,
+                              scene : RQQShareScene) -> SendMessageToQQReq {
+        let obj = QQApiFileObject(data: fileData, previewImageData: thumbImageData, title: title, description: description)
+        obj?.fileName = fileName
+        obj?.cflag = scene.rawValue
+        return SendMessageToQQReq(content: obj)!
+    }
     
     class func getTextReqToQZone(text : String) -> SendMessageToQQReq {
         let obj = QQApiImageArrayForQZoneObject(imageArrayData: nil, title: text, extMap: nil)

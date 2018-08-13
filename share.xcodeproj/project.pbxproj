@@ -22,6 +22,9 @@
 		CF07FC8420FF1DB00028C98C /* Liberation.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CF07FC8120FF1DB00028C98C /* Liberation.pdf */; };
 		CF07FC8520FF1DB00028C98C /* list.docx in Resources */ = {isa = PBXBuildFile; fileRef = CF07FC8220FF1DB00028C98C /* list.docx */; };
 		CF07FC8820FF29FD0028C98C /* RSinaWeiboManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF07FC8720FF29FD0028C98C /* RSinaWeiboManager.swift */; };
+		CF189F1421142F77009FD9E4 /* RShareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF189F1321142F77009FD9E4 /* RShareManager.swift */; };
+		CF189F1621143076009FD9E4 /* RRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF189F1521143076009FD9E4 /* RRegister.swift */; };
+		CF26B045211BD2F500D54CBF /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF26B044211BD2F500D54CBF /* String + Extension.swift */; };
 		CF3F709621095929003E6908 /* RPinterestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3F709521095929003E6908 /* RPinterestManager.swift */; };
 		CF72E1F920FDD62500DF3684 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF72E1F820FDD62500DF3684 /* SystemConfiguration.framework */; };
 		CF72E1FB20FDD63300DF3684 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CF72E1FA20FDD63300DF3684 /* libz.tbd */; };
@@ -52,6 +55,11 @@
 		CFA0780420E3E22A0058018D /* shareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA0780320E3E22A0058018D /* shareUITests.swift */; };
 		CFA8A93E21016F7A00B32FF9 /* RInstagramManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA8A93D21016F7A00B32FF9 /* RInstagramManager.swift */; };
 		CFA8A941210177E500B32FF9 /* RLineManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA8A940210177E500B32FF9 /* RLineManager.swift */; };
+		CFE98B982118454A004828EB /* RImageContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE98B972118454A004828EB /* RImageContent.swift */; };
+		CFE98B9A21184558004828EB /* RVideoContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE98B9921184558004828EB /* RVideoContent.swift */; };
+		CFE98B9C2118456F004828EB /* RWebpageContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE98B9B2118456F004828EB /* RWebpageContent.swift */; };
+		CFE98B9E21184586004828EB /* RTextContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE98B9D21184586004828EB /* RTextContent.swift */; };
+		CFE98BA021184594004828EB /* RAudioContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE98B9F21184594004828EB /* RAudioContent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +106,9 @@
 		CF07FC8120FF1DB00028C98C /* Liberation.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Liberation.pdf; sourceTree = "<group>"; };
 		CF07FC8220FF1DB00028C98C /* list.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = list.docx; sourceTree = "<group>"; };
 		CF07FC8720FF29FD0028C98C /* RSinaWeiboManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSinaWeiboManager.swift; sourceTree = "<group>"; };
+		CF189F1321142F77009FD9E4 /* RShareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RShareManager.swift; sourceTree = "<group>"; };
+		CF189F1521143076009FD9E4 /* RRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RRegister.swift; sourceTree = "<group>"; };
+		CF26B044211BD2F500D54CBF /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
 		CF3F709521095929003E6908 /* RPinterestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPinterestManager.swift; sourceTree = "<group>"; };
 		CF72E1EE20FDD58100DF3684 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXApiObject.h; path = thirdSdk/WXApiObject.h; sourceTree = "<group>"; };
 		CF72E1EF20FDD58200DF3684 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WechatAuthSDK.h; path = thirdSdk/WechatAuthSDK.h; sourceTree = "<group>"; };
@@ -138,6 +149,11 @@
 		CFA0780520E3E22B0058018D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFA8A93D21016F7A00B32FF9 /* RInstagramManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RInstagramManager.swift; sourceTree = "<group>"; };
 		CFA8A940210177E500B32FF9 /* RLineManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RLineManager.swift; sourceTree = "<group>"; };
+		CFE98B972118454A004828EB /* RImageContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RImageContent.swift; sourceTree = "<group>"; };
+		CFE98B9921184558004828EB /* RVideoContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RVideoContent.swift; sourceTree = "<group>"; };
+		CFE98B9B2118456F004828EB /* RWebpageContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RWebpageContent.swift; sourceTree = "<group>"; };
+		CFE98B9D21184586004828EB /* RTextContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTextContent.swift; sourceTree = "<group>"; };
+		CFE98B9F21184594004828EB /* RAudioContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RAudioContent.swift; sourceTree = "<group>"; };
 		D41C7A60538DE066FBB32D52 /* Pods_sharekit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sharekit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -190,6 +206,7 @@
 		CF07FC6820FECD870028C98C /* sharekit */ = {
 			isa = PBXGroup;
 			children = (
+				CF189F1721143288009FD9E4 /* share */,
 				CF3F7094210958F4003E6908 /* pinterest */,
 				CF75A4F521057361000B35EF /* googleplus */,
 				CF75A4F221056BFF000B35EF /* whatsapp */,
@@ -201,8 +218,6 @@
 				CF80D15B21001F4700711D45 /* qq */,
 				CF07FC8620FF29E40028C98C /* sina */,
 				CF07FC6A20FECD870028C98C /* wechat */,
-				CF07FC6B20FECD870028C98C /* RShare.swift */,
-				CF07FC6920FECD870028C98C /* RPlatform.swift */,
 			);
 			path = sharekit;
 			sourceTree = "<group>";
@@ -244,6 +259,23 @@
 				CF07FC8720FF29FD0028C98C /* RSinaWeiboManager.swift */,
 			);
 			path = sina;
+			sourceTree = "<group>";
+		};
+		CF189F1721143288009FD9E4 /* share */ = {
+			isa = PBXGroup;
+			children = (
+				CF07FC6B20FECD870028C98C /* RShare.swift */,
+				CF07FC6920FECD870028C98C /* RPlatform.swift */,
+				CF189F1321142F77009FD9E4 /* RShareManager.swift */,
+				CF189F1521143076009FD9E4 /* RRegister.swift */,
+				CFE98B972118454A004828EB /* RImageContent.swift */,
+				CFE98B9921184558004828EB /* RVideoContent.swift */,
+				CFE98B9B2118456F004828EB /* RWebpageContent.swift */,
+				CFE98B9D21184586004828EB /* RTextContent.swift */,
+				CFE98B9F21184594004828EB /* RAudioContent.swift */,
+				CF26B044211BD2F500D54CBF /* String + Extension.swift */,
+			);
+			path = share;
 			sourceTree = "<group>";
 		};
 		CF3F7094210958F4003E6908 /* pinterest */ = {
@@ -556,22 +588,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFE98B982118454A004828EB /* RImageContent.swift in Sources */,
+				CFE98B9E21184586004828EB /* RTextContent.swift in Sources */,
+				CF189F1621143076009FD9E4 /* RRegister.swift in Sources */,
 				CFA8A941210177E500B32FF9 /* RLineManager.swift in Sources */,
 				CF80D1622100601900711D45 /* RFacebookManager.swift in Sources */,
 				CF75A4F12105690D000B35EF /* RTumblrManager.swift in Sources */,
 				CFA8A93E21016F7A00B32FF9 /* RInstagramManager.swift in Sources */,
+				CFE98BA021184594004828EB /* RAudioContent.swift in Sources */,
 				CF80D15F21002A2A00711D45 /* RQqHelper.swift in Sources */,
 				CF3F709621095929003E6908 /* RPinterestManager.swift in Sources */,
+				CFE98B9C2118456F004828EB /* RWebpageContent.swift in Sources */,
 				CF75A4F721057375000B35EF /* RGooglePlusManager.swift in Sources */,
 				CF07FC7E20FEDE2E0028C98C /* RWechatHelper.swift in Sources */,
 				CF07FC7C20FED2710028C98C /* RWechatManager.swift in Sources */,
+				CFE98B9A21184558004828EB /* RVideoContent.swift in Sources */,
 				CF80D15D21001F6400711D45 /* RQqManager.swift in Sources */,
 				CF07FC8820FF29FD0028C98C /* RSinaWeiboManager.swift in Sources */,
 				CF80D16721006D0B00711D45 /* RTwitterAuthHepler.swift in Sources */,
 				CF80D16C2100714E00711D45 /* RTwitterManager.swift in Sources */,
 				CF07FC6D20FECD870028C98C /* RShare.swift in Sources */,
+				CF189F1421142F77009FD9E4 /* RShareManager.swift in Sources */,
 				CF07FC6C20FECD870028C98C /* RPlatform.swift in Sources */,
 				CF80D164210060C100711D45 /* RFacebookHelper.swift in Sources */,
+				CF26B045211BD2F500D54CBF /* String + Extension.swift in Sources */,
 				CFA077F120E3E2280058018D /* ViewController.swift in Sources */,
 				CFA077EF20E3E2280058018D /* AppDelegate.swift in Sources */,
 				CF75A4F421056C16000B35EF /* RWhatsAppManager.swift in Sources */,

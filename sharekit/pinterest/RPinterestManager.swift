@@ -10,12 +10,26 @@ import UIKit
 
 class RPinterestManager: RShare {
     
-    static let  shared = RPinterestManager()
+    static let shared = RPinterestManager()
     private override init() {}
     
     func sdkInitialize(appID : String, appSecret : String?) {
         PDKClient .configureSharedInstance(withAppId: appID)
     }
+    
+    override class func connect(c: (RShareSDKPlatform, RRegister) -> Void) {
+        c(.Pinterest, RRegister.shared)
+    }
+    
+    class override func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        return PDKClient.sharedInstance().handleCallbackURL(url)
+    }
+    class override func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        return PDKClient.sharedInstance().handleCallbackURL(url)
+    }
+    
+
+    
     func share(imageURL : String,
                webpageURL : String,
                boardName : String,
@@ -42,14 +56,4 @@ class RPinterestManager: RShare {
         }
     }
 
-}
-
-extension RPinterestManager {
-    
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        return PDKClient.sharedInstance().handleCallbackURL(url)
-    }
-    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        return PDKClient.sharedInstance().handleCallbackURL(url)
-    }
 }

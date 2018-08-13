@@ -26,6 +26,17 @@ class RSinaWeiboManager: RShare {
         WeiboSDK.registerApp(appKey)
     }
     
+    override class func connect(c: (RShareSDKPlatform, RRegister) -> Void) {
+        c(.Sina, RRegister.shared)
+    }
+    
+    class override func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        return WeiboSDK.handleOpen(url, delegate: RSinaWeiboManager.shared)
+    }
+    class override func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        return WeiboSDK.handleOpen(url, delegate: RSinaWeiboManager.shared)
+    }
+    
     
     func share(text : String, completion : RShareCompletion?) {
         if !RPlatform.isInstalled(platform: .Sina) {
@@ -95,15 +106,6 @@ class RSinaWeiboManager: RShare {
     }
 }
 
-extension RSinaWeiboManager {
-    
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        return WeiboSDK.handleOpen(url, delegate: self)
-    }
-    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        return WeiboSDK.handleOpen(url, delegate: self)
-    }
-}
 extension RSinaWeiboManager : WeiboSDKDelegate, WBMediaTransferProtocol {
     
     func didReceiveWeiboRequest(_ request: WBBaseRequest!) {}

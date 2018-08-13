@@ -35,8 +35,8 @@ class ViewController: UIViewController {
     private let webpageURL = "https://www.nytimes.com/2018/05/04/arts/music/playlist-christina-aguilera-kanye-west-travis-scott-dirty-projectors.html"
     private let thumbImage = #imageLiteral(resourceName: "c_1")
     
-    private var localVideoURL : URL? // QQ 和 Facebook 可用
-    private var localVideoURL2 : URL? // 新浪微博 和 Instagram 可用
+    private var videoAssetURL : URL? // QQ 和 Facebook 可用
+    private var videoFileURL : URL? // 新浪微博 和 Instagram 可用
     private var asset : PHAsset?
     
     private let shareCompletion : RShareCompletion =  { (p , state , errorInfo) in
@@ -48,7 +48,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getVideoURLLabel.text = "1, 若分享本地视频, 请先点击「获取视频URL」按钮; \n2, 在分享本地视频的过程中, 注意 demo 中 localVideoURL 和 localVideoURL2 的区别⚠️."
+        getVideoURLLabel.text = "1, 若分享本地视频, 请先点击「获取视频URL」按钮; \n2, 在分享本地视频的过程中, 注意 demo 中 videoFileURL 和 videoAssetURL 的区别⚠️."
     
     
     }
@@ -66,11 +66,11 @@ class ViewController: UIViewController {
     
     @IBAction func shareFbVid(_ sender: Any) {
         fbManager.sdkInitialize(appID: "234270717151331", secret: nil)
-        guard localVideoURL != nil else {
+        guard videoAssetURL != nil else {
             print("请先获取视频 URL⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️")
             return
         }
-        fbManager.share(localVideoURL: localVideoURL!, from: self)
+        fbManager.share(localVideoURL: videoAssetURL!, from: self)
     }
     
     @IBAction func shareFbMedia(_ sender: Any) {
@@ -91,11 +91,11 @@ class ViewController: UIViewController {
     }
    
     @IBAction func shareInsVid(_ sender: Any) {
-        guard localVideoURL2 != nil else {
+        guard videoFileURL != nil else {
             print("请先获取视频 URL⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️")
             return
         }
-        RInstagramManager.shared.share(localVideoURL: localVideoURL2!, description: shareDescription)
+        RInstagramManager.shared.share(localVideoURL: videoFileURL!, description: shareDescription)
     }
     @IBAction func shareTextWx(_ sender: Any) {
         wcManager.sdkInitialize(appID: "wxd471bcf3a21c7c4a", appSecret: "f71570ef272a5a6699decb264be9cdbb")
@@ -163,13 +163,13 @@ class ViewController: UIViewController {
     @IBAction func shareVidWb(_ sender: Any) {
         
         
-        guard localVideoURL2 != nil else {
+        guard videoFileURL != nil else {
             print("请先获取视频 URL⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️")
             return
         }
         wbManager.sdkInitialize(appKey: "3026908911", appSecret: "91fbafc7be7510c0ac5d73883c655db1")
         
-        wbManager.share(localVideoURL: localVideoURL2!, text: shareDescription, isToStory: false, completion: shareCompletion)
+        wbManager.share(localVideoURL: videoFileURL!, text: shareDescription, isToStory: false, completion: shareCompletion)
     }
     @IBAction func shareWebWb(_ sender: Any) {
         wbManager.share(webpageURL: webpageURL, objectID: "id", title: shareTitle, description: shareDescription, thumbImage: thumbImage, completion: shareCompletion)
@@ -203,13 +203,28 @@ class ViewController: UIViewController {
         qqManager.share(images: [#imageLiteral(resourceName: "c"), #imageLiteral(resourceName: "c"), #imageLiteral(resourceName: "c"), #imageLiteral(resourceName: "c")], description: shareDescription, completion: shareCompletion)
     }
     @IBAction func shareVidQz(_ sender: Any) {
-        guard localVideoURL != nil else {
+        guard videoAssetURL != nil else {
             print("请先获取视频 URL⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️")
             return
         }
         qqManager.sdkInitialize(appID: "1106463933", appKey: "4WSrOXMoeFMDNR2k")
-        qqManager.share(videoAssetURL: localVideoURL!, description: shareDescription, completion: shareCompletion)
+        qqManager.share(videoAssetURL: videoAssetURL!, description: shareDescription, completion: shareCompletion)
     }
+    
+    @IBAction func shareFiQ(_ sender: Any) {
+        
+        var videoData : Data?
+        do {
+            videoData = try Data(contentsOf: videoFileURL!)
+        } catch {
+            print(error)
+        }
+        
+        RQqManager.shared.share(fileData: videoData!, fileName: String.randomFileName() + ".mp4", title: shareTitle, description: shareDescription, thumbImage: #imageLiteral(resourceName: "c_1"), compeltion: shareCompletion)
+        
+    }
+    
+    
     @IBAction func shareTextWsa(_ sender: Any) {
         wsaManager.share(text: shareDescription)
     
@@ -260,10 +275,10 @@ extension ViewController : UINavigationControllerDelegate, UIImagePickerControll
         
         
         picker.dismiss(animated: true) {
-            self.localVideoURL2 = info[UIImagePickerControllerMediaURL] as? URL
-            self.localVideoURL = info[UIImagePickerControllerReferenceURL] as? URL
-            print("💚💚💚💚💚💚💚💚💚💚💚💚💚💚\(String(describing: self.localVideoURL?.absoluteString))")
-            print("♥️♥️♥️♥️♥️♥️♥️♥️♥️♥️♥️♥️\(String(describing: self.localVideoURL2?.absoluteString))")
+            self.videoFileURL = info[UIImagePickerControllerMediaURL] as? URL
+            self.videoAssetURL = info[UIImagePickerControllerReferenceURL] as? URL
+            print("💚💚💚💚💚💚💚💚💚💚💚💚💚💚\(String(describing: self.videoAssetURL?.absoluteString))")
+            print("♥️♥️♥️♥️♥️♥️♥️♥️♥️♥️♥️♥️\(String(describing: self.videoFileURL?.absoluteString))")
         }
         
     }

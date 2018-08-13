@@ -21,6 +21,9 @@ class RTumblrManager: RShare {
         FlurryTumblr.setDelegate(self)
     
     }
+    override class func connect(c: (RShareSDKPlatform, RRegister) -> Void) {
+        c(.Tumblr, RRegister.shared)
+    }
     
     
     func share(imageURL : String,

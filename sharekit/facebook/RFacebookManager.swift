@@ -10,7 +10,7 @@ import UIKit
 
 class RFacebookManager: RShare {
     
-    static let  shared = RFacebookManager()
+    static let shared = RFacebookManager()
     private override init() {}
     
     fileprivate var shareCompletion : RShareCompletion?
@@ -18,6 +18,21 @@ class RFacebookManager: RShare {
     
     func sdkInitialize(appID : String, secret : String?) {
         FBSDKSettings.setAppID(appID)
+    }
+    
+    override class func connect(c: (RShareSDKPlatform, RRegister) -> Void) {
+        c(.Facebook, RRegister.shared)
+    }
+    
+    class override func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        return FBSDKApplicationDelegate.sharedInstance().application(app, open: url, options : options)
+        
+    }
+    
+    class override func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        
+        return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication:sourceApplication , annotation: annotation)
     }
     
     func share(webpageURL : String,
@@ -95,15 +110,8 @@ extension RFacebookManager : FBSDKSharingDelegate {
     
 }
 extension RFacebookManager {
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        
-     return FBSDKApplicationDelegate.sharedInstance().application(app, open: url, options : options)
-        
-    }
-    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        
-        return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication:sourceApplication , annotation: annotation)
-    }
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
