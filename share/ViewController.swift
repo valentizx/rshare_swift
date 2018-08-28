@@ -30,10 +30,10 @@ class ViewController: UIViewController {
     private let hashTag = "#liberation"
     private let audioStreamURL = "http://10.136.9.109/fcgi-bin/fcg_music_get_playurl.fcg?song_id=1234&redirect=0&filetype=mp3&qqmusic_fromtag=15&app_id=100311325&app_key=b233c8c2c8a0fbee4f83781b4a04c595&device_id=1234"
     private let audioWebpageURL = "http://url.cn/5tZF9KT"
-    private let netImageURL = "http://photocdn.sohu.com/20151211/Img430920125.jpg"
+    private let netImageURL = "https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1509086430,2757737602&fm=11&gp=0.jpg"
     
     private let webpageURL = "https://www.nytimes.com/2018/05/04/arts/music/playlist-christina-aguilera-kanye-west-travis-scott-dirty-projectors.html"
-    private let thumbImage = #imageLiteral(resourceName: "c_1")
+    private let thumbImage = #imageLiteral(resourceName: "c_2")
     
     private var videoAssetURL : URL? // QQ 和 Facebook 可用
     private var videoFileURL : URL? // 新浪微博 和 Instagram 可用
@@ -273,6 +273,9 @@ class ViewController: UIViewController {
 extension ViewController : UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
+        if #available(iOS 11, *) {
+            
+        }
         
         picker.dismiss(animated: true) {
             self.videoFileURL = info[UIImagePickerControllerMediaURL] as? URL

@@ -13,6 +13,9 @@ class RLineManager: RShare {
     static let  shared = RLineManager()
     private override init() {}
     
+    fileprivate let lineURLPrefix = "line://msg/"
+    fileprivate var lineURL : URL?
+    
     override class func connect(c: (RShareSDKPlatform, RRegister) -> Void) {
         c(.Line, RRegister.shared)
     }
@@ -24,11 +27,9 @@ class RLineManager: RShare {
             return
         }
         
-        let urlString = "line://msg/text/?" + text.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-        
-        let url = URL(string: urlString)
-        if UIApplication.shared.canOpenURL(url!) {
-            UIApplication.shared.openURL(url!)
+        lineURL = URL(string: lineURLPrefix + "text/?" + text.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
+        if UIApplication.shared.canOpenURL(lineURL!) {
+            UIApplication.shared.openURL(lineURL!)
         }
         
     }
@@ -40,14 +41,12 @@ class RLineManager: RShare {
             return
         }
 
-        let pasteboard = UIPasteboard.general
-        pasteboard.setData(UIImageJPEGRepresentation(image, 0.1)!, forPasteboardType: "public.jpeg")
-    
-        let urlString = "line://msg/image/%@"
+        let p = UIPasteboard.general
+        p.setData(UIImageJPEGRepresentation(image, 0.1)!, forPasteboardType: "public.jpeg")
         
-        let url = URL(string: String(format: urlString, pasteboard.name as CVarArg))
-        if UIApplication.shared.canOpenURL(url!) {
-            UIApplication.shared.openURL(url!)
+        lineURL = URL(string: String(format: lineURLPrefix + "image/%@", p.name as CVarArg))
+        if UIApplication.shared.canOpenURL(lineURL!) {
+            UIApplication.shared.openURL(lineURL!)
         }
     }
 }

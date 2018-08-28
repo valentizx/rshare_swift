@@ -150,6 +150,7 @@ extension RSinaWeiboManager : WeiboSDKDelegate, WBMediaTransferProtocol {
         } else {
             errorInfo = "参数准备错误"
         }
+        message = nil
         shareCompletion!(.Sina, .Failure, errorInfo)
         
         

@@ -32,6 +32,7 @@ private struct TypeFlag : OptionSet {
     static let Webpage = TypeFlag(rawValue: enAppSupportContentFlag.MMAPP_SUPPORT_WEBPAGE.rawValue)
     
     
+    
 }
 
 class RWechatManager: RShare {
