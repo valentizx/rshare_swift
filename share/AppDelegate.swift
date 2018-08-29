@@ -16,8 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        
-        
         let string = "wwww.google.com"
         
         print(string.split(separator: "."))
@@ -37,10 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             builder.add(p: .WhatsApp)
             
         }
-        
-        
-        print("❤️❤️❤️❤️❤️\(platform.targets.count)")
-        
+
         RShareManager.shared.registerPlatform(platform: platform) { (p, obj) in
             switch p {
             case .Facebook:
@@ -66,11 +61,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        // return RWechatManager.shared.application(app, open: url, options : options)
-        // return RSinaWeiboManager.shared.application(app, open: url, options : options)
-        // return RQqManager.shared.application(app, open: url, options : options)
-        // return RFacebookManager.shared.application(app, open: url, options : options)
-        return RShareManager.shared.application(app, open: url, options : options)
+        // return RWechatManager.application(app, open: url, options : options)
+        // return RSinaWeiboManager.application(app, open: url, options : options)
+        // return RQqManager.application(app, open: url, options : options)
+        return RFacebookManager.application(app, open: url, options : options)
+        // return RShareManager.shared.application(app, open: url, options : options)
+        
     }
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         // return RWechatManager.shared.application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)

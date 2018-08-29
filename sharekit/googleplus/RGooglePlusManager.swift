@@ -24,15 +24,13 @@ class RGooglePlusManager: RShare, SFSafariViewControllerDelegate {
         components?.queryItems = [URLQueryItem(name: "url", value: webpageURL.absoluteString)]
         let url = components?.url
         
-        
-        UIApplication.shared.openURL(url!)
-//        if #available(iOS 9, *) {
-//            let vc = SFSafariViewController(url: url!)
-//            vc.delegate = self
-//            from.present(vc, animated: true, completion: nil)
-//        } else {
-//            UIApplication.shared.openURL(url!)
-//        }
+        if #available(iOS 9, *) {
+            let vc = SFSafariViewController(url: url!)
+            vc.delegate = self
+            from.present(vc, animated: true, completion: nil)
+        } else {
+            UIApplication.shared.openURL(url!)
+        }
     }
     
 }

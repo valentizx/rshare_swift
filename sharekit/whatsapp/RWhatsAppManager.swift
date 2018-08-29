@@ -26,10 +26,8 @@ class RWhatsAppManager: RShare {
             print("WhatsApp 未安装")
             return
         }
-        
-        let whatsappString = "whatsapp://send?text=" + text.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-        
-        let whatsappURL = URL (string: whatsappString)
+
+        let whatsappURL = URL (string: "whatsapp://send?text=" + text.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
         if UIApplication.shared.canOpenURL(whatsappURL!) {
             UIApplication.shared.openURL(whatsappURL!)
         }
