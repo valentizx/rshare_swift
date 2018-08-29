@@ -2,6 +2,10 @@
 
 RSHARE 这个 Demo 中支持: 微信、QQ、新浪微博、Facebook、GooglePlus(Google +)、Twitter、WhatsApp、Line、Tumblr、Instagram、Pinterest 11 个 Social 平台.
 
+❤️🧡💛💚💙💜🖤
+[详细设计、注意事项](https://rexzx.github.io/)
+❤️🧡💛💚💙💜🖤
+
 ### QQ
 #### 准备
 分享需要注册平台, [腾讯开发者主页](http://open.qq.com/), [SDK 下载](http://wiki.open.qq.com/wiki/mobile/SDK%E4%B8%8B%E8%BD%BD), QQ SDK 目前**不支持 pod 安装**, iOS API 调用说明[文档](http://wiki.open.qq.com/index.php?title=iOS_API%E8%B0%83%E7%94%A8%E8%AF%B4%E6%98%8E&oldid=46716).
