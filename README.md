@@ -3,7 +3,7 @@
 RSHARE 这个 Demo 中支持: 微信、QQ、新浪微博、Facebook、GooglePlus(Google +)、Twitter、WhatsApp、Line、Tumblr、Instagram、Pinterest 11 个 Social 平台.
 
 ❤️🧡💛💚💙💜🖤
-[详细设计、注意事项](https://rexzx.github.io/)
+[详细设计、注意事项](https://rexzx.github.io/2018/08/28/rshare-ios-vesion/)
 ❤️🧡💛💚💙💜🖤
 
 ### QQ
